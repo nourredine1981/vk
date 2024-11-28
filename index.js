@@ -12,3 +12,9 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const messageElement = document.getElementById('message');
+    messageElement.textContent = 'Hello, World! Ce message est généré par index.js';
+});
+
