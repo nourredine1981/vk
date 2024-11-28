@@ -13,6 +13,26 @@
 <body>
     <h1>Visualisation des Données VK</h1>
     <svg width="500" height="300"></svg>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .choices {
+            list-style-type: none;
+            padding: 0;
+        }
+        .choices li {
+            margin-bottom: 10px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
     <script>
         // Sélectionner l'élément SVG où le graphique sera dessiné
         const svg = d3.select("svg");
