@@ -28,7 +28,7 @@
 </head>
 <body>  
     
-    
+    <h1>Chat en Temps Réel</h1> <div id="chat"></div> <input type="text" id="message" placeholder="Entrez votre message"> <button id="send">Envoyer</button> <script> const chat = document.getElementById('chat'); const messageInput = document.getElementById('message'); const sendButton = document.getElementById('send'); const socket = new WebSocket('ws://localhost:8080'); socket.addEventListener('message', event => { const message = document.createElement('div'); message.textContent = event.data; chat.appendChild(message); chat.scrollTop = chat.scrollHeight; }); sendButton.addEventListener('click', () => { const message = messageInput.value; socket.send(message); messageInput.value = ''; }); messageInput.addEventListener('keypress', event => { if (event.key === 'Enter') { sendButton.click(); } }); </script>
     
     
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
