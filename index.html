@@ -10,7 +10,7 @@
         }
     </style>
 
-
+<meta charset="UTF-8"> <title>Telepathy Practice Game</title> <style> body { font-family: Arial, sans-serif; } .section { margin-bottom: 20px; } .result { margin-top: 20px; } </style>
     
 
     <style>
@@ -34,7 +34,7 @@
 </head>
 <body> 
     
-    
+    <h1>Telepathy Practice Game</h1> <div class="section"> <label for="role">Choose your role:</label> <select id="role"> <option value="sender">Sender</option> <option value="receiver">Receiver</option> </select> </div> <div class="section" id="sender-section"> <label for="thought">Enter a thought (image, word, or number):</label> <input type="text" id="thought"> <button onclick="sendThought()">Send Thought</button> </div> <div class="section" id="receiver-section" style="display: none;"> <button onclick="receiveThought()">Receive Thought</button> <div id="impression"></div> </div> <div class="result" id="result"></div> <script> class TelepathyGame { constructor() { this.thought = ''; } sendThought(thought) { this.thought = thought; } receiveThought() { return this.thought; } } const game = new TelepathyGame(); function sendThought() { const thought = document.getElementById('thought').value; game.sendThought(thought); document.getElementById('result').innerText = 'Thought sent!'; } function receiveThought() { const receivedThought = game.receiveThought(); document.getElementById('impression').innerText = `Received thought: ${receivedThought}`; } document.getElementById('role').addEventListener('change', function() { const role = this.value; if (role === 'sender') { document.getElementById('sender-section').style.display = 'block'; document.getElementById('receiver-section').style.display = 'none'; } else { document.getElementById('sender-section').style.display = 'none'; document.getElementById('receiver-section').style.display = 'block'; } }); </script>
     
     <h1>Jeu de Quiz sur l'Actualité</h1>
     <div id="quiz"></div>
