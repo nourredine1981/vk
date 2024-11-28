@@ -13,7 +13,63 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === 'get-user-data') {
     sendResponse(user);
   }
+});let count = 0;
+const counterElement = document.createElement('p');
+counterElement.textContent = `Compteur : ${count}`;
+document.getElementById('content').appendChild(counterElement);
+
+setInterval(() => {
+    count++;
+    counterElement.textContent = `Compteur : ${count}`;
+}, 1000);
+
+const timeElement = document.createElement('p');
+timeElement.textContent = `Heure actuelle : ${new Date().toLocaleTimeString()}`;
+
+const img = document.createElement('img');
+img.src = 'https://via.placeholder.com/150';
+img.alt = 'Image de remplacement';
+document.getElementById('content').appendChild(img);
+
+
+const list = document.createElement('ul');
+['Élément 1', 'Élément 2', 'Élément 3'].forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.textContent = item;
+    list.appendChild(listItem);
 });
+
+
+
+const form = document.createElement('form');
+const input = document.createElement('input');
+input.type = 'text';
+input.placeholder = 'Entrez votre nom';
+const submit = document.createElement('button');
+submit.textContent = 'Envoyer';
+form.appendChild(input);
+form.appendChild(submit);
+document.getElementById('content').appendChild(form);
+
+
+
+
+
+document.getElementById('content').appendChild(list);
+
+
+const button = document.createElement('button');
+button.textContent = 'Changer la couleur de fond';
+button.addEventListener('click', () => {
+    document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+});
+document.getElementById('content').appendChild(button);
+
+
+
+
+
+document.getElementById('content').appendChild(timeElement);
 
 // 1. Send a message to the service worker requesting the user's data
 chrome.runtime.sendMessage('get-user-data', (response) => {
