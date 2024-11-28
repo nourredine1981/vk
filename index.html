@@ -27,7 +27,8 @@
     </style>
 </head>
 <body>     <br><br><br><br><br><br><br><br><br><br><br><br><br> 
-
+<div id="content"> <h1>Bienvenue sur mon projet Node.js</h1> <p id="message">Chargement...</p> </div> <script src="index.js"></script>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br> 
 
     <h1>Jeu avec des Images</h1> <canvas id="gameCanvas" width="800" height="600"></canvas> <script> const canvas = document.getElementById('gameCanvas'); const ctx = canvas.getContext('2d'); const image = new Image(); image.src = 'path/to/your/image.png'; // Remplacez par le chemin de votre image let x = canvas.width / 2; let y = canvas.height / 2; const speed = 5; image.onload = () => { drawImage(); }; function drawImage() { ctx.clearRect(0, 0, canvas.width, canvas.height); ctx.drawImage(image, x, y, 50, 50); // Dessine l'image à la position (x, y) avec une taille de 50x50 pixels } window.addEventListener('keydown', (event) => { switch (event.key) { case 'ArrowUp': y -= speed; break; case 'ArrowDown': y += speed; break; case 'ArrowLeft': x -= speed; break; case 'ArrowRight': x += speed; break; } drawImage(); }); </script>
  <br><br><br><br><br><br><br><br><br><br><br><br><br> 
