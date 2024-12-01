@@ -91,3 +91,21 @@ document.addEventListener('DOMContentLoaded', () => {
     messageElement.textContent = 'Hello, World! Ce message est généré par index.js';
 });
 
+
+// Remplacez 'YOUR_ACCESS_TOKEN' par votre jeton d'accès VK
+const accessToken = 'YOUR_ACCESS_TOKEN';
+const userId = 'USER_ID_TO_SEND_MESSAGE';
+const message = 'Bonjour! Comment ça va?';
+
+fetch(`https://api.vk.com/method/messages.send?user_id=${userId}&message=${message}&access_token=${accessToken}&v=5.131`)
+  .then(response => response.json())
+  .then(data => {
+    if (data.response) {
+      console.log('Message envoyé avec succès!');
+    } else {
+      console.error('Erreur lors de l\'envoi du message:', data);
+    }
+  })
+  .catch(error => console.error('Erreur de requête:', error));
+
+
