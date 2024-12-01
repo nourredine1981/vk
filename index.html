@@ -11,77 +11,88 @@
     </style>
 </head>
 <body>
-
-document.addEventListener('DOMContentLoaded', () => {
-    let count = 0;
-    const counterElement = document.createElement('p');
-    counterElement.textContent = `Compteur : ${count}`;
-    document.getElementById('content').appendChild(counterElement);
-
-    setInterval(() => {
-        count++;
-        counterElement.textContent = `Compteur : ${count}`;
-    }, 1000);
-
-    const timeElement = document.createElement('p');
-    timeElement.textContent = `Heure actuelle : ${new Date().toLocaleTimeString()}`;
-    document.getElementById('content').appendChild(timeElement);
-
-    const img = document.createElement('img');
-    img.src = 'https://via.placeholder.com/150';
-    img.alt = 'Image de remplacement';
-    document.getElementById('content').appendChild(img);
-
-    const list = document.createElement('ul');
-    ['Élément 1', 'Élément 2', 'Élément 3'].forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.textContent = item;
-        list.appendChild(listItem);
-    });
-    document.getElementById('content').appendChild(list);
-
-    const form = document.createElement('form');
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = 'Entrez votre nom';
-    const submit = document.createElement('button');
-    submit.textContent = 'Envoyer';
-    form.appendChild(input);
-    form.appendChild(submit);
-    document.getElementById('content').appendChild(form);
-
-    const button = document.createElement('button');
-    button.textContent = 'Changer la couleur de fond';
-    button.addEventListener('click', () => {
-        document.body.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    });
-    document.getElementById('content').appendChild(button);
-
-    const messageElement = document.getElementById('message');
-    messageElement.textContent = 'Hello, World! Ce message est généré par index.js';
-});
-
-// Remplacez 'YOUR_ACCESS_TOKEN' par votre jeton d'accès VK
-const accessToken = 'YOUR_ACCESS_TOKEN';
-const userId = 'USER_ID_TO_SEND_MESSAGE';
-const message = 'Bonjour! Comment ça va?';
-
-fetch(`https://api.vk.com/method/messages.send?user_id=${userId}&message=${message}&access_token=${accessToken}&v=5.131`)
-  .then(response => response.json())
-  .then(data => {
-    if (data.response) {
-      console.log('Message envoyé avec succès!');
-    } else {
-      console.error('Erreur lors de l\'envoi du message:', data);
-    }
-  })
-  .catch(error => console.error('Erreur de requête:', error));
-
-
+    <div id="content">
+        <h1>Bienvenue sur mon projet Node.js</h1>
+        <p id="message">Chargement...</p>
+    </div>
 
     <h1>Visualisation des Données VK</h1>
     <svg width="500" height="300"></svg>
+
+    <h1>Jeu avec des Images</h1>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <h1>Live d'Or</h1>
+    <div id="chat"></div>
+    <input type="text" id="messageInput" placeholder="Entrez votre message">
+    <button id="send">Envoyer</button>
+
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let count = 0;
+            const counterElement = document.createElement('p');
+            counterElement.textContent = `Compteur : ${count}`;
+            document.getElementById('content').appendChild(counterElement);
+
+            setInterval(() => {
+                count++;
+                counterElement.textContent = `Compteur : ${count}`;
+            }, 1000);
+
+            const timeElement = document.createElement('p');
+            timeElement.textContent = `Heure actuelle : ${new Date().toLocaleTimeString()}`;
+            document.getElementById('content').appendChild(timeElement);
+
+            const img = document.createElement('img');
+            img.src = 'https://via.placeholder.com/150';
+            img.alt = 'Image de remplacement';
+            document.getElementById('content').appendChild(img);
+
+            const list = document.createElement('ul');
+            ['Élément 1', 'Élément 2', 'Élément 3'].forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+                list.appendChild(listItem);
+            });
+            document.getElementById('content').appendChild(list);
+
+            const form = document.createElement('form');
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.placeholder = 'Entrez votre nom';
+            const submit = document.createElement('button');
+            submit.textContent = 'Envoyer';
+            form.appendChild(input);
+            form.appendChild(submit);
+            document.getElementById('content').appendChild(form);
+
+            const button = document.createElement('button');
+            button.textContent = 'Changer la couleur de fond';
+            button.addEventListener('click', () => {
+                document.body.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            });
+            document.getElementById('content').appendChild(button);
+
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = 'Hello, World! Ce message est généré par index.js';
+        });
+
+        // Remplacez 'YOUR_ACCESS_TOKEN' par votre jeton d'accès VK
+        const accessToken = 'YOUR_ACCESS_TOKEN';
+        const userId = 'USER_ID_TO_SEND_MESSAGE';
+        const message = 'Bonjour! Comment ça va?';
+
+        fetch(`https://api.vk.com/method/messages.send?user_id=${userId}&message=${message}&access_token=${accessToken}&v=5.131`)
+          .then(response => response.json())
+          .then(data => {
+            if (data.response) {
+              console.log('Message envoyé avec succès!');
+            } else {
+              console.error('Erreur lors de l\'envoi du message:', data);
+            }
+          })
+          .catch(error => console.error('Erreur de requête:', error));
+
         // Sélectionner l'élément SVG où le graphique sera dessiné
         const svg = d3.select("svg");
 
@@ -124,87 +135,61 @@ fetch(`https://api.vk.com/method/messages.send?user_id=${userId}&message=${messa
 
         svg.append("g")
             .call(d3.axisLeft(yScale));
+
+        // Jeu avec des Images
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const image = new Image();
+        image.src = 'path/to/your/image.png'; // Remplacez par le chemin de votre image
+        let x = canvas.width / 2;
+        let y = canvas.height / 2;
+        const speed = 5;
+        image.onload = () => {
+            drawImage();
+        };
+        function drawImage() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(image, x, y, 50, 50); // Dessine l'image à la position (x, y) avec une taille de 50x50 pixels
+        }
+        window.addEventListener('keydown', (event) => {
+            switch (event.key) {
+                case 'ArrowUp':
+                    y -= speed;
+                    break;
+                case 'ArrowDown':
+                    y += speed;
+                    break;
+                case 'ArrowLeft':
+                    x -= speed;
+                    break;
+                case 'ArrowRight':
+                    x += speed;
+                    break;
+            }
+            drawImage();
+        });
+
+        // Chat en Temps Réel
+        const chat = document.getElementById('chat');
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('send');
+        const socket = new WebSocket('ws://localhost:8080');
+        socket.addEventListener('message', event => {
+            const message = document.createElement('div');
+            message.textContent = event.data;
+            chat.appendChild(message);
+            chat.scrollTop = chat.scrollHeight;
+        });
+        sendButton.addEventListener('click', () => {
+            const message = messageInput.value;
+            socket.send(message);
+            messageInput.value = '';
+        });
+        messageInput.addEventListener('keypress', event => {
+            if (event.key === 'Enter') {
+                sendButton.click();
+            }
+        });
     </script>
-
-
-  <br><br><br><br><br><br><br><br><br><br><br><br><br> 
-<div id="content"> <h1>Bienvenue sur mon projet Node.js</h1> <p id="message">Chargement...</p> </div> <script src="index.js"></script>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br> 
-
-    <h1>Jeu avec des Images</h1> <canvas id="gameCanvas" width="800" height="600"></canvas> <script> const canvas = document.getElementById('gameCanvas'); const ctx = canvas.getContext('2d'); const image = new Image(); image.src = 'path/to/your/image.png'; // Remplacez par le chemin de votre image let x = canvas.width / 2; let y = canvas.height / 2; const speed = 5; image.onload = () => { drawImage(); }; function drawImage() { ctx.clearRect(0, 0, canvas.width, canvas.height); ctx.drawImage(image, x, y, 50, 50); // Dessine l'image à la position (x, y) avec une taille de 50x50 pixels } window.addEventListener('keydown', (event) => { switch (event.key) { case 'ArrowUp': y -= speed; break; case 'ArrowDown': y += speed; break; case 'ArrowLeft': x -= speed; break; case 'ArrowRight': x += speed; break; } drawImage(); }); </script>
- <br><br><br><br><br><br><br><br><br><br><br><br><br> 
-    
-    <h1>Live d'Or</h1> <div id="chat"></div> <input type="text" id="message" placeholder="Entrez votre message"> <button id="send">Envoyer</button> <script> const chat = document.getElementById('chat'); const messageInput = document.getElementById('message'); const sendButton = document.getElementById('send'); const socket = new WebSocket('ws://localhost:8080'); socket.addEventListener('message', event => { const message = document.createElement('div'); message.textContent = event.data; chat.appendChild(message); chat.scrollTop = chat.scrollHeight; }); sendButton.addEventListener('click', () => { const message = messageInput.value; socket.send(message); messageInput.value = ''; }); messageInput.addEventListener('keypress', event => { if (event.key === 'Enter') { sendButton.click(); } }); </script>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <h1>Chat en Temps Réel</h1> <div id="chat"></div> <input type="text" id="message" placeholder="Entrez votre message"> <button id="send">Envoyer</button> <script> const chat = document.getElementById('chat'); const messageInput = document.getElementById('message'); const sendButton = document.getElementById('send'); const socket = new WebSocket('ws://localhost:8080'); socket.addEventListener('message', event => { const message = document.createElement('div'); message.textContent = event.data; chat.appendChild(message); chat.scrollTop = chat.scrollHeight; }); sendButton.addEventListener('click', () => { const message = messageInput.value; socket.send(message); messageInput.value = ''; }); messageInput.addEventListener('keypress', event => { if (event.key === 'Enter') { sendButton.click(); } }); </script>
-    
-    
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
-    document.addEventListener('DOMContentLoaded', () => {
-    let count = 0;
-    const counterElement = document.createElement('p');
-    counterElement.textContent = `Compteur : ${count}`;
-    document.getElementById('content').appendChild(counterElement);
-
-    setInterval(() => {
-        count++;
-        counterElement.textContent = `Compteur : ${count}`;
-    }, 1000);
-
-    const timeElement = document.createElement('p');
-    timeElement.textContent = `Heure actuelle : ${new Date().toLocaleTimeString()}`;
-    document.getElementById('content').appendChild(timeElement);
-
-    const img = document.createElement('img');
-    img.src = 'https://via.placeholder.com/150';
-    img.alt = 'Image de remplacement';
-    document.getElementById('content').appendChild(img);
-
-    const list = document.createElement('ul');
-    ['Élément 1', 'Élément 2', 'Élément 3'].forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.textContent = item;
-        list.appendChild(listItem);
-    });
-    document.getElementById('content').appendChild(list);
-
-    const form = document.createElement('form');
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = 'Entrez votre nom';
-    const submit = document.createElement('button');
-    submit.textContent = 'Envoyer';
-    form.appendChild(input);
-    form.appendChild(submit);
-    document.getElementById('content').appendChild(form);
-
-    const button = document.createElement('button');
-    button.textContent = 'Changer la couleur de fond';
-    button.addEventListener('click', () => {
-        document.body.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    });
-    document.getElementById('content').appendChild(button);
-
-    const messageElement = document.getElementById('message');
-    messageElement.textContent = 'Hello, World! Ce message est généré par index.js';
-});
-
-// Remplacez 'YOUR_ACCESS_TOKEN' par votre jeton d'accès VK
-const accessToken = 'YOUR_ACCESS_TOKEN';
-const userId = 'USER_ID_TO_SEND_MESSAGE';
-const message = 'Bonjour! Comment ça va?';
-
-fetch(`https://api.vk.com/method/messages.send?user_id=${userId}&message=${message}&access_token=${accessToken}&v=5.131`)
-  .then(response => response.json())
-  .then(data => {
-    if (data.response) {
-      console.log('Message envoyé avec succès!');
-    } else {
-      console.error('Erreur lors de l\'envoi du message:', data);
-    }
-  })
-  .catch(error => console.error('Erreur de requête:', error));
-
 </body>
 </html>
