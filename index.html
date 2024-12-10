@@ -10,9 +10,14 @@
         }
     </style>
 
-<style>audio { margin-top: 20px; } font-family: Arial, sans-serif; text-align: center; margin-top: 50px; } button { padding: 10px 20px; font-size: 16px; cursor: pointer; } #quote { margin-top: 20px; font-size: 18px; color: #555; } </style> </head>
+<style>#counter { font-size: 24px; color: #333; }
+    audio { margin-top: 20px; } font-family: Arial, sans-serif; text-align: center; margin-top: 50px; } button { padding: 10px 20px; font-size: 16px; cursor: pointer; } #quote { margin-top: 20px; font-size: 18px; color: #555; } </style> </head>
 
 <body>
+
+    <h1>Compteur de Visiteurs</h1> <p id="counter"></p> <script> // Vérifier si le compteur existe déjà dans le stockage local if (localStorage.getItem('visitCount')) { // Incrémenter le compteur localStorage.setItem('visitCount', Number(localStorage.getItem('visitCount')) + 1); } else { // Initialiser le compteur localStorage.setItem('visitCount', 1); } // Afficher le compteur document.getElementById('counter').textContent = 'Nombre de visites : ' + localStorage.getItem('visitCount'); </script>
+
+    <br><br>br>
 
     <h1>Afficheur de Citations</h1> <button onclick="showQuote()">Afficher une citation</button> <p id="quote"></p> <script> const quotes = [ "La vie est ce que vous en faites.", "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès.", "Croyez en vous et tout est possible.", "Chaque jour est une nouvelle opportunité.", "La persévérance est la clé de la réussite." ]; function showQuote() { const randomIndex = Math.floor(Math.random() * quotes.length); document.getElementById('quote').textContent = quotes[randomIndex]; } </script>
 
