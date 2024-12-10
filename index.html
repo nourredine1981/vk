@@ -173,7 +173,56 @@
         "Ne laissez pas ce que vous ne pouvez pas faire interférer avec ce que vous pouvez faire.",
         "Le succès est de se lever une fois de plus que vous êtes tombé."
     ];
+ function showMotivationalMessage5() {
+        const randomIndex = Math.floor(Math.random() * motivationalMessages.length);
+        const messageElement = document.getElementById('motivationalMessage');
+        messageElement.textContent = motivationalMessages[randomIndex];
+        messageElement.style.opacity = 1;
+        setTimeout(() => {
+            messageElement.style.opacity = 0;
+        }, 3000);
+    }
 
+    setInterval(showMotivationalMessage, 5000);
+
+
+     function showMotivationalMessage4() {
+        const randomIndex = Math.floor(Math.random() * motivationalMessages.length);
+        const messageElement = document.getElementById('motivationalMessage');
+        messageElement.textContent = motivationalMessages[randomIndex];
+        messageElement.style.opacity = 1;
+        setTimeout(() => {
+            messageElement.style.opacity = 0;
+        }, 3000);
+    }
+
+    setInterval(showMotivationalMessage, 5000);
+
+     function showMotivationalMessage3() {
+        const randomIndex = Math.floor(Math.random() * motivationalMessages.length);
+        const messageElement = document.getElementById('motivationalMessage');
+        messageElement.textContent = motivationalMessages[randomIndex];
+        messageElement.style.opacity = 1;
+        setTimeout(() => {
+            messageElement.style.opacity = 0;
+        }, 3000);
+    }
+
+    setInterval(showMotivationalMessage, 5000);
+
+     function showMotivationalMessage2() {
+        const randomIndex = Math.floor(Math.random() * motivationalMessages.length);
+        const messageElement = document.getElementById('motivationalMessage');
+        messageElement.textContent = motivationalMessages[randomIndex];
+        messageElement.style.opacity = 1;
+        setTimeout(() => {
+            messageElement.style.opacity = 0;
+        }, 3000);
+    }
+
+    setInterval(showMotivationalMessage, 5000);
+
+    
     function showMotivationalMessage() {
         const randomIndex = Math.floor(Math.random() * motivationalMessages.length);
         const messageElement = document.getElementById('motivationalMessage');
