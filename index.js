@@ -68,27 +68,39 @@ class TrendsSDK {
         return this.trends.length;
     }
 }
+// index.js
+
+class TrendsSDK {
+    constructor() {
+        this.trends = [];
+    }
+
+    addTrend(trend) {
+        this.trends.push(trend);
+    }
+
+    getTrend(index) {
+        if (index < 0 || index >= this.trends.length) {
+            throw new RangeError("Index out of range");
+        }
+        return this.trends[index];
+    }
+
+    getNumberOfTrends() {
+        return this.trends.length;
+    }
+}
 
 const sdk = new TrendsSDK();
 
-app.get('/trends', (req, res) => {
-    res.json(sdk.trends);
-});
+sdk.addTrend("Graph Theory");
+sdk.addTrend("Combinatorics");
+sdk.addTrend("Number Theory");
 
-app.post('/trends', (req, res) => {
-    const newTrend = req.body.trend;
-    sdk.addTrend(newTrend);
-    res.status(201).send('Trend added');
-});
+for (let i = 0; i < sdk.getNumberOfTrends(); i++) {
+    console.log(`Current Trend ${i + 1}: ${sdk.getTrend(i)}`);
+}
 
-app.get('/trends/:index', (req, res) => {
-    try {
-        const index = parseInt(req.params.index, 10);
-        res.json(sdk.getTrend(index));
-    } catch (error) {
-        res.status(400).send(error.message);
-    }
-});
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
