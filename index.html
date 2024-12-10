@@ -16,8 +16,8 @@
 
 input, button { padding: 10px; margin: 5px; font-size: 16px; } #result { margin-top: 20px; font-size: 18px; color: #333; }
 
-
-    </style></head>head>
+#messages { list-style-type: none; padding: 0; } #messages li { padding: 8px; margin-bottom: 10px; background-color: #f4f4f4; border-radius: 5px; } #form { display: flex; justify-content: center; margin-top: 20px; } #input { padding: 10px; font-size: 16px; width: 300px; } #send { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style></head>
 
 <body>  <div id="content">
         <h1>Bienvenue sur mon projet Node.js</h1>
@@ -30,7 +30,7 @@ input, button { padding: 10px; margin: 5px; font-size: 16px; } #result { margin-
   </div>
     <h1>Afficheur de Citations</h1> <button onclick="showQuote()">Afficher une citation</button> <p id="quote"></p> <script> const quotes = [ "La vie est ce que vous en faites.", "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès.", "Croyez en vous et tout est possible.", "Chaque jour est une nouvelle opportunité.", "La persévérance est la clé de la réussite." ]; function showQuote() { const randomIndex = Math.floor(Math.random() * quotes.length); document.getElementById('quote').textContent = quotes[randomIndex]; } </script>
 
-    <br><br><br>
+    <br><h1>Chat en Temps Réel</h1> <ul id="messages"></ul> <form id="form" action=""> <input id="input" autocomplete="off" placeholder="Entrez votre message" /><button id="send">Envoyer</button> </form> <script src="/socket.io/socket.io.js"></script> <script> const socket = io(); document.getElementById('form').addEventListener('submit', function(e) { e.preventDefault(); const input = document.getElementById('input'); if (input.value) { socket.emit('chat message', input.value); input.value = ''; } }); socket.on('chat message', function(msg) { const item = document.createElement('li'); item.textContent = msg; document.getElementById('messages').appendChild(item); window.scrollTo(0, document.body.scrollHeight); }); </script><br><br>
 
 <h1>Lecteur de Musique</h1> <input type="file" id="fileInput" accept="audio/*"> <audio id="audioPlayer" controls> Votre navigateur ne supporte pas l'élément audio. </audio> <script> document.getElementById('fileInput').addEventListener('change', function(event) { const file = event.target.files[0]; if (file) { const audioPlayer = document.getElementById('audioPlayer'); audioPlayer.src = URL.createObjectURL(file); audioPlayer.play(); } }); </script>
     <br><br><br> class TrendsSDK { constructor() { this.trends = []; } addTrend(trend) { this.trends.push(trend); } getTrend(index) 
