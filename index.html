@@ -16,7 +16,7 @@
 
     <h1>Afficheur de Citations</h1> <button onclick="showQuote()">Afficher une citation</button> <p id="quote"></p> <script> const quotes = [ "La vie est ce que vous en faites.", "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès.", "Croyez en vous et tout est possible.", "Chaque jour est une nouvelle opportunité.", "La persévérance est la clé de la réussite." ]; function showQuote() { const randomIndex = Math.floor(Math.random() * quotes.length); document.getElementById('quote').textContent = quotes[randomIndex]; } </script>
 
-    <br><br>br>
+    <br><br><br>
 
 <h1>Lecteur de Musique</h1> <input type="file" id="fileInput" accept="audio/*"> <audio id="audioPlayer" controls> Votre navigateur ne supporte pas l'élément audio. </audio> <script> document.getElementById('fileInput').addEventListener('change', function(event) { const file = event.target.files[0]; if (file) { const audioPlayer = document.getElementById('audioPlayer'); audioPlayer.src = URL.createObjectURL(file); audioPlayer.play(); } }); </script>
      class TrendsSDK { constructor() { this.trends = []; } addTrend(trend) { this.trends.push(trend); } getTrend(index) 
