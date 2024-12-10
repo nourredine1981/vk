@@ -17,6 +17,9 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+
+const https = require('https'); const fs = require('fs'); const express = require('express'); const app = express(); // Remplace ces chemins par les chemins de ton certificat SSL et de ta clé privée const options = { key: fs.readFileSync('path/to/your/private.key'), cert: fs.readFileSync('path/to/your/certificate.crt') }; // Route de test app.get('/', (req, res) => { res.send('Bienvenue sur le serveur HTTPS de Nourredine!'); }); // Crée le serveur HTTPS https.createServer(options, app).listen(443, () => { console.log('Serveur HTTPS en cours d\'exécution sur le port 443'); });
 const { exec } = require('child_process');
 
 function callJavaFunction(functionName) {
