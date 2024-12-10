@@ -19,7 +19,7 @@
     <br><br><br>
 
 <h1>Lecteur de Musique</h1> <input type="file" id="fileInput" accept="audio/*"> <audio id="audioPlayer" controls> Votre navigateur ne supporte pas l'élément audio. </audio> <script> document.getElementById('fileInput').addEventListener('change', function(event) { const file = event.target.files[0]; if (file) { const audioPlayer = document.getElementById('audioPlayer'); audioPlayer.src = URL.createObjectURL(file); audioPlayer.play(); } }); </script>
-     class TrendsSDK { constructor() { this.trends = []; } addTrend(trend) { this.trends.push(trend); } getTrend(index) 
+    <br><br><br> class TrendsSDK { constructor() { this.trends = []; } addTrend(trend) { this.trends.push(trend); } getTrend(index) 
     { if (index < 0 || index >= this.trends.length) { throw new RangeError("Index out of range");
         } return this.trends[index]; } getNumberOfTrends() { return this.trends.length; } } 
         document.addEventListener("DOMContentLoaded", function() { const sdk = new TrendsSDK(); sdk.addTrend("Graph Theory"); 
