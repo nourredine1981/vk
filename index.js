@@ -43,6 +43,38 @@ document.getElementById('content').appendChild(list);
 const express = require('express');
 const app = express();
 const port = 3000;
+// index.js
+
+class TrendsSDK {
+    constructor() {
+        this.trends = [];
+    }
+
+    addTrend(trend) {
+        this.trends.push(trend);
+    }
+
+    getTrend(index) {
+        if (index < 0 || index >= this.trends.length) {
+            throw new RangeError("Index out of range");
+        }
+        return this.trends[index];
+    }
+
+    getNumberOfTrends() {
+        return this.trends.length;
+    }
+}
+
+const sdk = new TrendsSDK();
+
+sdk.addTrend("Graph Theory");
+sdk.addTrend("Combinatorics");
+sdk.addTrend("Number Theory");
+
+for (let i = 0; i < sdk.getNumberOfTrends(); i++) {
+    console.log(`Current Trend ${i + 1}: ${sdk.getTrend(i)}`);
+}
 
 class TrendsSDK {
     constructor() {
