@@ -39,6 +39,60 @@ const list = document.createElement('ul');
     list.appendChild(listItem);
 });
 document.getElementById('content').appendChild(list);
+// server.js
+const express = require('express');
+const app = express();
+const port = 3000;
+
+class TrendsSDK {
+    constructor() {
+        this.trends = [
+            "Graph Theory",
+            "Combinatorics",
+            "Number Theory"
+        ];
+    }
+
+    addTrend(trend) {
+        this.trends.push(trend);
+    }
+
+    getTrend(index) {
+        if (index < 0 || index >= this.trends.length) {
+            throw new RangeError("Index out of range");
+        }
+        return this.trends[index];
+    }
+
+    getNumberOfTrends() {
+        return this.trends.length;
+    }
+}
+
+const sdk = new TrendsSDK();
+
+app.get('/trends', (req, res) => {
+    res.json(sdk.trends);
+});
+
+app.post('/trends', (req, res) => {
+    const newTrend = req.body.trend;
+    sdk.addTrend(newTrend);
+    res.status(201).send('Trend added');
+});
+
+app.get('/trends/:index', (req, res) => {
+    try {
+        const index = parseInt(req.params.index, 10);
+        res.json(sdk.getTrend(index));
+    } catch (error) {
+        res.status(400).send(error.message);
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}/`);
+});
 
 const form = document.createElement('form');
 const input = document.createElement('input');
