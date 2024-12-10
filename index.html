@@ -9,11 +9,19 @@
             fill: steelblue;
         }
     </style>
-</head>
+
+
+
+
+    <title>Current Trends in Mathematics</title> <script> class TrendsSDK { constructor() { this.trends = []; } addTrend(trend) { this.trends.push(trend); } getTrend(index) { if (index < 0 || index >= this.trends.length) { throw new RangeError("Index out of range"); } return this.trends[index]; } getNumberOfTrends() { return this.trends.length; } } document.addEventListener("DOMContentLoaded", function() { const sdk = new TrendsSDK(); sdk.addTrend("Graph Theory"); sdk.addTrend("Combinatorics"); sdk.addTrend("Number Theory"); const trendsList = document.getElementById("trends-list"); for (let i = 0; i < sdk.getNumberOfTrends(); i++) { const li = document.createElement("li"); li.textContent = `Current Trend ${i + 1}: ${sdk.getTrend(i)}`; trendsList.appendChild(li); } }); </script> </head>  <h1>Current Trends in Mathematics</h1> <ul id="trends-list"></ul>
+
+
+        
+
 <body>
     <div id="content">
         <h1>Bienvenue sur mon projet Node.js</h1>
-        <p id="message">Chargement...</p>
+        <p id="message">Chargement <h1>Current Trends in Mathematics</h1> <ul id="trends-list"></ul></p>
     </div>
 
     <h1>Visualisation des Données VK</h1>
