@@ -11,7 +11,7 @@
     #counter { font-size: 24px; color: #333; }
     audio { margin-top: 20px; } font-family: Arial, sans-serif; text-align: center; margin-top: 50px; } button { padding: 10px 20px; font-size: 16px; cursor: pointer; } #quote { margin-top: 20px; font-size: 18px; color: #555; }
 
-
+#philosophy { margin-top: 20px; font-size: 18px; color: #333; white-space: pre-wrap; /* Pour conserver les sauts de ligne */ } button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
 input, button { padding: 10px; margin: 5px; font-size: 16px; } #result { margin-top: 20px; font-size: 18px; color: #333; }
 
 #messages { list-style-type: none; padding: 0; } #messages li { padding: 8px; margin-bottom: 10px; background-color: #f4f4f4; border-radius: 5px; } #form { display: flex; justify-content: center; margin-top: 20px; } #input { padding: 10px; font-size: 16px; width: 300px; } #send { padding: 10px 20px; font-size: 16px; cursor: pointer; }
@@ -19,7 +19,7 @@ input, button { padding: 10px; margin: 5px; font-size: 16px; } #result { margin-
 
 <body>  <div id="content">
     <br><br><h1>Ouvrir un Lien dans un Nouvel Onglet</h1> <button onclick="openLink()">Ouvrir le Lien</button> <script> function openLink() { window.open('https://nourredinezaherz.wixsite.com/d-veloppement-d-indi', '_blank'); } </script>
-    
+    <h1>Texte de Philosophie Aléatoire</h1> <button onclick="showPhilosophy()">Afficher un texte</button> <p id="philosophy"></p> <script> const philosophies = [ `La vie est un mystère qu'il faut vivre, et non un problème à résoudre. - Gandhi`, `Le bonheur n'est pas quelque chose de prêt à l'emploi. Il vient de vos propres actions. - Dalaï Lama`, `La seule chose que nous ayons à craindre est la peur elle-même. - Franklin D. Roosevelt`, `La connaissance parle, mais la sagesse écoute. - Jimi Hendrix`, `La vie est vraiment simple, mais nous insistons à la rendre compliquée. - Confucius`, `Le plus grand obstacle à la vie est l'attente, qui espère demain et néglige aujourd'hui. - Sénèque`, `La vraie générosité envers l'avenir consiste à tout donner au présent. - Albert Camus`, `La vie est un défi à relever, un bonheur à mériter, une aventure à tenter. - Mère Teresa`, `La philosophie est une lutte contre l'envoûtement de notre intelligence par les moyens de notre langage. - Ludwig Wittgenstein`, `Le but de la vie est de vivre en accord avec la nature. - Zénon de Citium` ]; function showPhilosophy() { const randomIndex = Math.floor(Math.random() * philosophies.length); document.getElementById('philosophy').textContent = philosophies[randomIndex]; } </script>
     <script>
         <h1>Bienvenue sur mon projet Node.js</h1>
         <p id="message">Chargement <h1>Current Trends in Mathematics</h1> <ul id="trends-list"></ul></p>
