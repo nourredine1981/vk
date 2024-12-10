@@ -115,6 +115,25 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
+const { exec } = require('child_process');
+
+function callJavaFunction(functionName) {
+    exec(`java MyJavaClass ${functionName}`, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Erreur: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.error(`Erreur: ${stderr}`);
+            return;
+        }
+        console.log(`Résultat: ${stdout}`);
+    });
+}
+
+// Appeler les fonctions Java
+callJavaFunction('function1');
+callJavaFunction('function2');
 
 let count = 0;
 const counterElement = document.createElement('p');
