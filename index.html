@@ -123,7 +123,35 @@ document.write("<FONT COLOR=\"#" + color_h3 + color_h1 + color_h2 + "\">" + text
 
 
 	<table border="1"><tr><td>
-<h1>Une page qui en conna&icirc;t sur vous...</h1>
+<h1>Une page qui en conna&icirc;t sur vous...</h1>cliquer ici pour avoir votre adresse ip</button>
+ <p id="lastcheck"></p>
+<script type="text/javascript">
+var i = 0;
+var prev;
+var timer = null;
+function stop() {
+  clearInterval(timer);
+}
+function start() {
+  checkIP();
+  clearInterval(timer);
+  timer = setInterval(function() {
+    checkIP();
+  }, 5000);
+}
+function checkIP() {
+  var text = "";
+  $.get("https://api.ipify.org", function(data) {
+    text =
+      "  L'adresse ip de votre ordinateur est : " + data;
+    document.getElementById("lastcheck").innerHTML = text;
+    if (data != prev) {
+      document.getElementById("log").innerHTML += text;
+    }
+    prev = data;
+  });
+}
+</script>
 
 <script type="text/javascript">
 <!--
