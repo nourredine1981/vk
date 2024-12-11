@@ -343,9 +343,6 @@ document.writeln(DocDate(),"</b></font>");
 	<h1>Jeu de Devinettes</h1> <input type="number" id="guess" placeholder="Entrez un nombre"> <button onclick="checkGuess()">Deviner</button> <p id="result"></p> <script> const randomNumber = Math.floor(Math.random() * 100) + 1; function checkGuess() { const guess = parseInt(document.getElementById('guess').value); const result = document.getElementById('result'); if (guess === randomNumber) { result.textContent = "Bravo! Vous avez deviné le bon nombre."; } else if (guess > randomNumber) { result.textContent = "Trop haut! Essayez encore."; } else { result.textContent = "Trop bas! Essayez encore."; } } </script>
 
   <br>
-	
-	<h1>Flux RSS Aléatoires</h1> <ul id="rssFeed"></ul> <script> const rssUrls = [ 'https://www.service-public.fr/abonnements/rss/actu-actualites-particuliers.rss', 'https://cors-anywhere.herokuapp.com/https://pixabay.com/fr/music/search/rap/rss', 'https://cors-anywhere.herokuapp.com/https://pixabay.com/fr/music/search/rock/rss', 'https://cors-anywhere.herokuapp.com/https://pixabay.com/fr/music/search/latino/rss' ]; async function fetchRSS(url) { const response = await fetch(url); const text = await response.text(); const parser = new DOMParser(); const xml = parser.parseFromString(text, 'text/xml'); return xml.querySelectorAll('item'); } async function displayRandomRSS() { const randomUrl = rssUrls[Math.floor(Math.random() * rssUrls.length)]; const items = await fetchRSS(randomUrl); const rssFeed = document.getElementById('rssFeed'); rssFeed.innerHTML = ''; // Clear previous items items.forEach(item => { const title = item.querySelector('title').textContent; const link = item.querySelector('link').textContent; const listItem = document.createElement('li'); const anchor = document.createElement('a'); anchor.href = link; anchor.textContent = title; anchor.target = '_blank'; listItem.appendChild(anchor); rssFeed.appendChild(listItem); }); } setInterval(displayRandomRSS, 10000); // Change the RSS feed every 10 seconds displayRandomRSS(); // Display the first RSS feed immediately </script>
-    
 
 </td></tr>
  
@@ -356,11 +353,5 @@ document.writeln(DocDate(),"</b></font>");
  </table>
 	
 
-<h1>Simuler Sudo en JavaScript</h1> <br><h1>Flux RSS de Musique Libre de Droits</h1>
-	
-	<ul id="rssFeed"></ul> <script> const rssUrls = [ 'https://www.lemonde.fr/economie/rss_full.xml', 'https://cors-anywhere.herokuapp.com/https://pixabay.com/fr/music/search/rap/rss', 'https://cors-anywhere.herokuapp.com/https://pixabay.com/fr/music/search/rock/rss', 'https://cors-anywhere.herokuapp.com/https://pixabay.com/fr/music/search/latino/rss' ]; async function fetchRSS(url) { const response = await fetch(url); const text = await response.text(); const parser = new DOMParser(); const xml = parser.parseFromString(text, 'text/xml'); return xml.querySelectorAll('item'); } async function displayRandomRSS() { const randomUrl = rssUrls[Math.floor(Math.random() * rssUrls.length)]; const items = await fetchRSS(randomUrl); const rssFeed = document.getElementById('rssFeed'); rssFeed.innerHTML = ''; // Clear previous items items.forEach(item => { const title = item.querySelector('title').textContent; const link = item.querySelector('link').textContent; const listItem = document.createElement('li'); const anchor = document.createElement('a'); anchor.href = link; anchor.textContent = title; anchor.target = '_blank'; listItem.appendChild(anchor); rssFeed.appendChild(listItem); }); } setInterval(displayRandomRSS, 10000); // Change the RSS feed every 10 seconds displayRandomRSS(); // Display the first RSS feed immediately </script>
-	
-	
-	
 </body>
 </html>
