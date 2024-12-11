@@ -9,8 +9,23 @@
 	<style> 
 	body { z-index: auto; font-family: Arial, sans-serif; text-align: center; margin-top: 50px; position: relative;} 
 
+p { z-index: inherit;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
 
-		p{z-index: inherit;}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 	#motivationalMessage { font-size: 18px; color: #333; margin-top: 20px; opacity: 0; transition: opacity 1s;  position: relative;
   z-index: auto;
   border: dashed;
