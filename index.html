@@ -287,9 +287,7 @@ document.write("<FONT COLOR=\"#" + color_h3 + color_h1 + color_h2 + "\">" + text
 
 
 
-</td></tr>
-
-<tr><td>
+</td><td>
 
 
 
@@ -366,10 +364,13 @@ document.writeln(DocDate(),"</b></font>");
 
     Informations Financières</h1> <p id="info"></p> <script> const financialData = [ "DAX: 20,329.16 -0.083%", "FTSE 100: 8,280.36 -0.86%", "CAC 40: 7,394.78 -1.14%", "IBEX 35: 11,965.50 -0.38%", "STOXX 50: 4,951.74 -0.68%", "TSLA: $400.99 +2.87%", "Index CAC 40: 7,394.78 -1.14%", "Index SBF 120: 5,607.05 -1.01%", "AI L'Air Liquide: €160.04 -1.00%", "RNO Renault: €44.10 +0.78%", "Index Dow Jones: 44,247.83 -0.35%", "Index S&P 500: 6,034.91 +0.30%", "SAN Sanofi: €91.75 +0.076%", "GLE Societe Generale: €26.68 +0.26%", "TSLA Tesla: $400.99 +2.87%", "AI L'Air Liquide: €160.04 -1.00%", "DG Vinci: €100.95 +0.20%", "ORA Orange: €9.71 +0.45%", "ALNOV Novacyt: €0.62 +0.48%", "GNFT Genfit: €3.66 +2.40%", "BNP BNP Paribas: €59.70 +0.60%", "VK Vallourec: €16.68 +1.65%", "SGO Saint Gobain: €89.18 +0.78%", "AB AB Science: €0.78 +0.76%" ]; function updateInfo() { const randomIndex = Math.floor(Math.random() * financialData.length); document.getElementById('info').textContent = financialData[randomIndex]; } setInterval(updateInfo, 10000); // Change le texte toutes les 10 secondes updateInfo(); // Affiche immédiatement une première information </script>
     
-	<hr></tr>
+	<hr>
+
+</td>
+	</tr>
 	
 	<tr> 
-<table><tr> <td> <h1>Image avec Lien</h1> <img id="linkedImage" src="https://nourredine1981.github.io/vk/n.jpg" alt="Entrez"> <script> document.getElementById('linkedImage').addEventListener('click', function() { window.location.href = 'nourredine.html'; }); </script>
+ <td> <h1>Image avec Lien</h1> <img id="linkedImage" src="https://nourredine1981.github.io/vk/n.jpg" alt="Entrez"> <script> document.getElementById('linkedImage').addEventListener('click', function() { window.location.href = 'nourredine.html'; }); </script>
 </td><td><h1>Image avec Lien</h1> <img id="linkedImage" src="https://nourredine1981.github.io/vk/n2.jpg" alt="Entrez"> <script> document.getElementById('linkedImage').addEventListener('click', function() { window.location.href = 'nourredine.html'; }); </script>
 </td><tr><td><h1>Image avec Lien</h1> <img id="linkedImage" src="https://nourredine1981.github.io/vk/n3.jpg" alt="Entrez"> <script> document.getElementById('linkedImage').addEventListener('click', function() { window.location.href = 'nourredine.html'; }); </script>
 </td><td><h1>Image avec Lien</h1> <img id="linkedImage" src="https://nourredine1981.github.io/vk/n4.jpg" alt="Entrez"> <script> document.getElementById('linkedImage').addEventListener('click', function() { window.location.href = 'nourredine.html'; }); </script>
@@ -378,10 +379,7 @@ document.writeln(DocDate(),"</b></font>");
 </tr></table>
 <h1>Image avec Lien</h1> <img id="linkedImage" src="https://via.placeholder.com/300x200?text=Войти" alt="Войти"> <img id="linkedImageLatin" src="https://via.placeholder.com/300x200?text=Intrare" alt="Intrare"> <img id="linkedImageArabic" src="https://via.placeholder.com/300x200?text=ادخل" alt="ادخل"> <script> document.getElementById('linkedImage').addEventListener('click', function() { window.location.href = 'nourredine.html'; }); document.getElementById('linkedImageLatin').addEventListener('click', function() { window.location.href = 'nourredine.html'; }); document.getElementById('linkedImageArabic').addEventListener('click', function() { window.location.href = 'nourredine.html'; }); </script>
 <h1>Flux RSS Télépathie</h1> <ul id="rssFeed"></ul> <script> const rssUrls = [ 'https://cors-anywhere.herokuapp.com/https://www.service-public.fr/abonnements/rss/actu-actualites-particuliers.rss' ]; async function fetchRSS(url) { const response = await fetch(url); const text = await response.text(); const parser = new DOMParser(); const xml = parser.parseFromString(text, 'text/xml'); return xml.querySelectorAll('item'); } async function displayRandomRSS() { const randomUrl = rssUrls[Math.floor(Math.random() * rssUrls.length)]; const items = await fetchRSS(randomUrl); const rssFeed = document.getElementById('rssFeed'); rssFeed.innerHTML = ''; // Clear previous items items.forEach(item => { const title = item.querySelector('title').textContent; const link = item.querySelector('link').textContent; const listItem = document.createElement('li'); const anchor = document.createElement('a'); anchor.href = link; anchor.textContent = title; anchor.target = '_blank'; listItem.appendChild(anchor); rssFeed.appendChild(listItem); }); } setInterval(displayRandomRSS, 10000); // Change the RSS feed every 10 seconds displayRandomRSS(); // Display the first RSS feed immediately </script>
-</tr></td><td><tr>
-
-
-</td>
+</td></tr>
 
 		<tr><td>
 	
