@@ -10,7 +10,7 @@
             margin-top: 50px;
         }
 
-	    motivationalMessage { font-size: 18px; color: #333; margin-top: 20px; opacity: 0; transition: opacity 1s; }
+	    #motivationalMessage { font-size: 18px; color: #333; margin-top: 20px; opacity: 0; transition: opacity 1s; }
         button {
             padding: 10px 20px;
             font-size: 16px;
@@ -18,72 +18,12 @@
             margin-top: 20px;
         ul { list-style-type: none; padding: 0; } li { margin: 10px 0; }
     </style>
-<h1 id="monH1">Votre adresse IP affichée en JavaScript</h1>
+
   <h1><a href="./nourredine_images.html">liens images Nourredine</h1></a>
-<div id="ip">?</div>
+
     
-<script type="text/javascript">
-/* Récupération de l'adresse IP de l'utilisateur */
-function getIP() {
-  var ajax = new XMLHttpRequest();
-  ajax.onload = function() {
-    console.log("Appel AJAX terminé");
-    console.log("  status : "+this.status);
-    console.log("  response : "+this.response);    
-    if (this.status == 200) { /* Le service a bien répondu */
-      var ip=this.response;
-      var reg=new RegExp("^[0-9]{1,3}.+[0-9]{1,3}.+[0-9]{1,3}.+[0-9]{1,3}$")
-      if (reg.test(ip)) {
-        document.getElementById("ip").innerHTML=ip;
-      } else {
-        document.getElementById("ip").innerHTML="Erreur retour";
-      }
-    }
-  }
-  /* Préparation de la requête et envoi */
-  var url="/api/get-my-ip.php";
-  ajax.open("GET", url, true);
-  ajax.send();
-}
-getIP();
-</script>
-<script type="text/javascript">
-<!--
-function cherche_valeur() {
- var valeur = "";
- if(document.cookie) {
-  var valeur_depart = document.cookie.indexOf("=") + 1;
-  var valeur_fin = document.cookie.indexOf(";");
-  if (valeur_fin == -1)
-   valeur_fin = document.cookie.length;
-  valeur = document.cookie.substring(valeur_depart,valeur_fin);
- }
- return valeur;
-}
 
-function fixer_valeur(indicateur, valeur, expire) {
- var maintenant = new Date();
- var temps = new Date(maintenant.getTime() + expire);
- document.cookie = indicateur+"="+valeur+"; expires="+temps.toGMTString()+";";
-}
 
-function etat_compteur() {
- var peremption = 1000*60*60*24*365;
- var nombre = cherche_valeur();
- var compteur = 0;
- if(nombre != "") compteur = parseInt(nombre);
- if(document.cookie) {
-   compteur = compteur + 1;
-   fixer_valeur("compteur",compteur,peremption);
- }
- else {
-   compteur = 1;
-   fixer_valeur("compteur",compteur,peremption);
- }
- return(compteur);
-}
-//-->
-</script>
 <script language="JavaScript">
 <!-- Begin
 // http://javascript.internet.com
