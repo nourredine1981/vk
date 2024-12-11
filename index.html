@@ -86,18 +86,78 @@ p { z-index: inherit;
 	   position: relative;
 	   
 	   } </style>
-	
-	
-	
-	
-	
-	
-	<!-- Google Tag Manager --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Y4EQBYXB4"></script>
-	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-6Y4EQBYXB4'); 
-	</script> <!-- Google Tag Manager --> <script> (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-MQDLV8CM'); 
-	
-	</script> <!-- End Google Tag Manager -->
-	
+ <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Y4EQBYXB4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6Y4EQBYXB4');
+    </script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+    <!-- Configuration Firebase -->
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDjen1ww21fT5CH1OayUAwwLRA6uDDC9uY",
+        authDomain: "nourredine1981-2994e.firebaseapp.com",
+        projectId: "nourredine1981-2994e",
+        storageBucket: "nourredine1981-2994e.firebasestorage.app",
+        messagingSenderId: "629973451845",
+        appId: "1:629973451845:web:701d229f6999951f80cf2c"
+    };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Fonctions JavaScript pour afficher la date et le compteur de visiteurs -->
+    <script>
+    function getLongDateString() {
+        var monthNames = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+        var dayNames = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+        var dayOfWeek = this.getDay();
+        var day = dayNames[dayOfWeek];
+        var dateOfMonth = this.getDate();
+        var monthNo = this.getMonth();
+        var month = monthNames[monthNo];
+        var year = this.getFullYear();
+        var dateStr = day + " " + dateOfMonth + " " + month + " " + year;
+        return dateStr;
+    }
+
+    Date.prototype.getLongDateString = getLongDateString;
+
+    function DocDate() {
+        var DateTimeStr = document.lastModified;
+        var secOffset = Date.parse(DateTimeStr);
+        var dateStr = "Unknown";
+
+        if (secOffset != 0 && secOffset != null) { // Pour les navigateurs qui supportent lastModified
+            var aDate = new Date();
+            aDate.setTime(secOffset);
+            dateStr = aDate.getLongDateString();
+        }
+
+        return dateStr;
+    }
+
+    window.addEventListener('load', function() {
+        document.getElementById('lastModified').textContent = "Dernière modification : " + DocDate();
+        
+        // Compteur de visiteurs
+        var visitorCountRef = firebase.database().ref('visitors/count');
+        visitorCountRef.transaction(function(currentCount) {
+            return (currentCount || 0) + 1;
+        }).then(function(snapshot) {
+            document.getElementById('visitorCount').textContent = "Nombre de visiteurs : " + snapshot.snapshot.val();
+        });
+    });
+    </script>
+
+
+
 </head>
 																																																																															  
 																																																																																																																																																																																																																											  </head>
