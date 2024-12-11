@@ -298,14 +298,23 @@ if (secOffset == 0 || secOffset == null) //Opera3.2
 document.write(" <font face=Verdana size=2 color=#000080>Dernière mise à jour : <b>");
 document.writeln(DocDate(),"</b></font>");
 </script><hr>
-	 <br><br> <button onclick="redirectToNourredine()">Bienvenue sur la page de Nourredine</button>
+
+
+	<table><tr><td> <br><br> <button onclick="redirectToNourredine()">Bienvenue sur la page de Nourredine</button>
 
     <script>
         function redirectToNourredine() {
             alert("Bienvenue sur la page de Nourredine");
             window.location.href = "nourredine.html";
         }
-    </script>
+    </script></td>	<hr>
+
+
+
+<hr><br>  
+    Informations Financières</h1> <p id="info"></p> <script> const financialData = [ "DAX: 20,329.16 -0.083%", "FTSE 100: 8,280.36 -0.86%", "CAC 40: 7,394.78 -1.14%", "IBEX 35: 11,965.50 -0.38%", "STOXX 50: 4,951.74 -0.68%", "TSLA: $400.99 +2.87%", "Index CAC 40: 7,394.78 -1.14%", "Index SBF 120: 5,607.05 -1.01%", "AI L'Air Liquide: €160.04 -1.00%", "RNO Renault: €44.10 +0.78%", "Index Dow Jones: 44,247.83 -0.35%", "Index S&P 500: 6,034.91 +0.30%", "SAN Sanofi: €91.75 +0.076%", "GLE Societe Generale: €26.68 +0.26%", "TSLA Tesla: $400.99 +2.87%", "AI L'Air Liquide: €160.04 -1.00%", "DG Vinci: €100.95 +0.20%", "ORA Orange: €9.71 +0.45%", "ALNOV Novacyt: €0.62 +0.48%", "GNFT Genfit: €3.66 +2.40%", "BNP BNP Paribas: €59.70 +0.60%", "VK Vallourec: €16.68 +1.65%", "SGO Saint Gobain: €89.18 +0.78%", "AB AB Science: €0.78 +0.76%" ]; function updateInfo() { const randomIndex = Math.floor(Math.random() * financialData.length); document.getElementById('info').textContent = financialData[randomIndex]; } setInterval(updateInfo, 10000); // Change le texte toutes les 10 secondes updateInfo(); // Affiche immédiatement une première information </script>
+    
+	<hr></td></tr></table>	
 
 	
 <br>
@@ -321,14 +330,7 @@ document.writeln(DocDate(),"</b></font>");
 
 	
 	
-	<hr>
 
-
-
-<hr><br>  
-    Informations Financières</h1> <p id="info"></p> <script> const financialData = [ "DAX: 20,329.16 -0.083%", "FTSE 100: 8,280.36 -0.86%", "CAC 40: 7,394.78 -1.14%", "IBEX 35: 11,965.50 -0.38%", "STOXX 50: 4,951.74 -0.68%", "TSLA: $400.99 +2.87%", "Index CAC 40: 7,394.78 -1.14%", "Index SBF 120: 5,607.05 -1.01%", "AI L'Air Liquide: €160.04 -1.00%", "RNO Renault: €44.10 +0.78%", "Index Dow Jones: 44,247.83 -0.35%", "Index S&P 500: 6,034.91 +0.30%", "SAN Sanofi: €91.75 +0.076%", "GLE Societe Generale: €26.68 +0.26%", "TSLA Tesla: $400.99 +2.87%", "AI L'Air Liquide: €160.04 -1.00%", "DG Vinci: €100.95 +0.20%", "ORA Orange: €9.71 +0.45%", "ALNOV Novacyt: €0.62 +0.48%", "GNFT Genfit: €3.66 +2.40%", "BNP BNP Paribas: €59.70 +0.60%", "VK Vallourec: €16.68 +1.65%", "SGO Saint Gobain: €89.18 +0.78%", "AB AB Science: €0.78 +0.76%" ]; function updateInfo() { const randomIndex = Math.floor(Math.random() * financialData.length); document.getElementById('info').textContent = financialData[randomIndex]; } setInterval(updateInfo, 10000); // Change le texte toutes les 10 secondes updateInfo(); // Affiche immédiatement une première information </script>
-    
-	<hr>
 	<br><h1>Citas de Metafísica Freudiana</h1> <button onclick="showQuote()">Mostrar una cita</button> <p id="quote"></p> <script> const quotes = [ "La metafísica es la rama de la filosofía que estudia la naturaleza fundamental de la realidad.", "Freud definió la metapsicología como el estudio de los procesos mentales más allá de la conciencia.", "La metapsicología freudiana explora conceptos como el inconsciente, el ello, el yo y el superyó.", "Freud utilizó la metapsicología para establecer la certeza de la existencia del inconsciente.", "La metapsicología examina los principios primeros y las causas últimas de los fenómenos psíquicos.", "Freud criticó la metafísica tradicional y propuso una nueva aproximación basada en la psicoanálisis.", "La metapsicología contemporánea incluye debates sobre el realismo, el nominalismo y el materialismo.", "La metapsicología es considerada una disciplina especulativa y abstracta.", "Las preguntas metapsicológicas están a menudo relacionadas con problemas epistemológicos y ontológicos.", "La metapsicología sigue influyendo en el pensamiento filosófico y científico moderno." ]; function showQuote() { const randomIndex = Math.floor(Math.random() * quotes.length); document.getElementById('quote').textContent = quotes[randomIndex]; } </script>
      <h1>Images Aléatoires</h1> <img id="randomImage" src="" alt="Image aléatoire"> <script> const images = [ "https://via.placeholder.com/300x200?text=Image+1", "https://via.placeholder.com/300x200?text=Image+2", "https://via.placeholder.com/300x200?text=Image+3", "https://via.placeholder.com/300x200?text=Image+4", "https://via.placeholder.com/300x200?text=Image+5" ]; function changeImage() { const randomIndex = Math.floor(Math.random() * images.length); document.getElementById('randomImage').src = images[randomIndex]; } setInterval(changeImage, 10000); // Change l'image toutes les 10 secondes changeImage(); // Affiche immédiatement une première image </script>
     <hr>
