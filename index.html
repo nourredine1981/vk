@@ -1,6 +1,6 @@
 <!DOCTYPE html> <html lang="fr"> <head> <meta charset="UTF-8"> <title>Page de Nourredine</title>
 
-
+<link rel="manifest" href="manifest.json"> <style> body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; } #motivationalMessage { font-size: 18px; color: #333; margin-top: 20px; opacity: 0; transition: opacity 1s; } button { padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 20px; } ul { list-style-type: none; padding: 0; } li { margin: 10px 0; } </style> <!-- Google Tag Manager --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Y4EQBYXB4"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-6Y4EQBYXB4'); </script> <!-- Firebase SDK --> <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script> <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script> <!-- Configuration Firebase --> <script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Y4EQBYXB4"></script>
@@ -176,7 +176,7 @@ if (secOffset == 0 || secOffset == null) //Opera3.2
 			<a href="https://exodeinformatique.wixsite.com/exode-informatique">Blog</a><br><br>
 			<a href="https://nourredine1981.github.io/vk/bookmarks.html">Favoris recherche temporaires </a><br><br>
 		 	<a href="https://m.vk.com/nourredine.zaher">Vk Profile Nourredine </a><br><br>
-			<a href="./pwa.html">Progressive web apps</a><br><br>																																																																																																																																																																																																																					  
+			<a href="./pwa.html">Progressive web apps</a><br><br>	<h1>PWA de Nourredine</h1> <p id="motivationalMessage"></p> <p id="lastModified"></p> <!-- Affichage de la date de dernière modification --> <p id="visitorCount"></p> <!-- Affichage du compteur de visiteurs --> <!-- Enregistrer le service worker --> <script> if ('serviceWorker' in navigator) { window.addEventListener('load', function() { navigator.serviceWorker.register('/service-worker.js') .then(function(registration) { console.log('Service Worker registered with scope: ', registration.scope); }, function(err) { console.log('Service Worker registration failed: ', err); }); }); } </script>																																																																																																																																																																																																																				  
 	</p>
 		<hr><br><br><br><p align="center"><img src="./nourredine.jpg" width=10% height=5%></p>
 
