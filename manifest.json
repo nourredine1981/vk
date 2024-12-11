@@ -5,6 +5,10 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
+  "lang": "fr",
+  "orientation": "portrait",
+  "categories": ["education"],
+  "description": "Une PWA éducative pour apprendre le développement web.",
   "icons": [
     {
       "src": "icon-192x192.png",
@@ -15,6 +19,14 @@
       "src": "icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide"
     }
   ]
 }
