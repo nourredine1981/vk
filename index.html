@@ -318,8 +318,7 @@ document.writeln(DocDate(),"</b></font>");
 	// Ajoute plus de messages ici si nécessaire 
 	
 	];
-	
-	function showmotivationalMessage() {
+	function showMotivationalMessage() {
     const randomIndex = Math.floor(Math.random() * motivationalMessages.length);
     const messageElement = document.getElementById('motivationalMessage');
     messageElement.textContent = motivationalMessages[randomIndex];
@@ -330,6 +329,7 @@ document.writeln(DocDate(),"</b></font>");
 }
 
 setInterval(showMotivationalMessage, 5000);
+
 
 	
 	</script>
