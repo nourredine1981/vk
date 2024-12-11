@@ -19,9 +19,7 @@
         ul { list-style-type: none; padding: 0; } li { margin: 10px 0; }
     </style>
 
-  <h1><a href="./nourredine_images.html">liens images Nourredine</h1></a>
-
-    
+ 
 
 
 <script language="JavaScript">
@@ -92,6 +90,14 @@ document.write("<FONT COLOR=\"#" + color_h3 + color_h1 + color_h2 + "\">" + text
 
 
 	<table border="0"><tr><td>
+
+
+ <h1><a href="./nourredine_images.html">liens images Nourredine</h1></a>
+
+    
+		
+    <h1>Flux RSS Français</h1> <ul id="rssFeed"></ul> <script> async function fetchRSS() { const response = await fetch('https://www.service-public.fr/abonnements/rss/actu-actualites-particuliers.rss'); const text = await response.text(); const parser = new DOMParser(); const xml = parser.parseFromString(text, 'text/xml'); const items = xml.querySelectorAll('item'); const rssFeed = document.getElementById('rssFeed'); items.forEach(item => { const title = item.querySelector('title').textContent; const link = item.querySelector('link').textContent; const listItem = document.createElement('li'); const anchor = document.createElement('a'); anchor.href = link; anchor.textContent = title; anchor.target = '_blank'; listItem.appendChild(anchor); rssFeed.appendChild(listItem); }); } fetchRSS(); </script>
+<hr>
 
 <h1>Messages de Motivation</h1>
 		
@@ -324,8 +330,6 @@ document.writeln(DocDate(),"</b></font>");
 	<h1>Citas de Metafísica Freudiana</h1> <button onclick="showQuote()">Mostrar una cita</button> <p id="quote"></p> <script> const quotes = [ "La metafísica es la rama de la filosofía que estudia la naturaleza fundamental de la realidad.", "Freud definió la metapsicología como el estudio de los procesos mentales más allá de la conciencia.", "La metapsicología freudiana explora conceptos como el inconsciente, el ello, el yo y el superyó.", "Freud utilizó la metapsicología para establecer la certeza de la existencia del inconsciente.", "La metapsicología examina los principios primeros y las causas últimas de los fenómenos psíquicos.", "Freud criticó la metafísica tradicional y propuso una nueva aproximación basada en la psicoanálisis.", "La metapsicología contemporánea incluye debates sobre el realismo, el nominalismo y el materialismo.", "La metapsicología es considerada una disciplina especulativa y abstracta.", "Las preguntas metapsicológicas están a menudo relacionadas con problemas epistemológicos y ontológicos.", "La metapsicología sigue influyendo en el pensamiento filosófico y científico moderno." ]; function showQuote() { const randomIndex = Math.floor(Math.random() * quotes.length); document.getElementById('quote').textContent = quotes[randomIndex]; } </script>
      <h1>Images Aléatoires</h1> <img id="randomImage" src="" alt="Image aléatoire"> <script> const images = [ "./n.jpg","./n2.jpg","./n3.jpg","./n4.jpg","./n5.jpg","./n6.jpg","./n7.jpg","./n8.jpg","./n9.jpg" ]; function changeImage() { const randomIndex = Math.floor(Math.random() * images.length); document.getElementById('randomImage').src = images[randomIndex]; } setInterval(changeImage, 10000); // Change l'image toutes les 10 secondes changeImage(); // Affiche immédiatement une première image </script>
    
-    <h1>Flux RSS Français</h1> <ul id="rssFeed"></ul> <script> async function fetchRSS() { const response = await fetch('https://www.service-public.fr/abonnements/rss/actu-actualites-particuliers.rss'); const text = await response.text(); const parser = new DOMParser(); const xml = parser.parseFromString(text, 'text/xml'); const items = xml.querySelectorAll('item'); const rssFeed = document.getElementById('rssFeed'); items.forEach(item => { const title = item.querySelector('title').textContent; const link = item.querySelector('link').textContent; const listItem = document.createElement('li'); const anchor = document.createElement('a'); anchor.href = link; anchor.textContent = title; anchor.target = '_blank'; listItem.appendChild(anchor); rssFeed.appendChild(listItem); }); } fetchRSS(); </script>
-<hr>
     
 
 
