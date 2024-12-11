@@ -143,47 +143,6 @@ document.writeln(DocDate(),"</b></font>");
 	
 <br>
 
-<h1>Messages de Motivation</h1> <p id="motivationalMessage"></p>
-	
-	
-	<script> 
-		
-		
-		const motivationalMessages = [ 
-	
-	
-	
-	"Vous êtes capable de grandes choses.", 
-			"Croyez en vous et tout est possible.", 
-			"Chaque jour est une nouvelle opportunité.", 
-			"La persévérance est la clé de la réussite.", 
-			"Le succès commence par la volonté d'essayer." ,
-	
-	
-	
-
-	
-	
-	// Ajoute plus de messages ici si nécessaire 
-	
-	];
-	
-	function showmotivationalMessage() {
-    const randomIndex = Math.floor(Math.random() * motivationalMessages.length);
-    const messageElement = document.getElementById('motivationalMessage');
-    messageElement.textContent = motivationalMessages[randomIndex];
-    messageElement.style.opacity = 1;
-    setTimeout(() => {
-        messageElement.style.opacity = 0;
-    }, 3000);
-}
-
-setInterval(showMotivationalMessage, 5000);
-
-	
-	</script>
-
-
 
 
 
