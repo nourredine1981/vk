@@ -165,7 +165,23 @@ if (secOffset == 0 || secOffset == null) //Opera3.2
 	return dateStr;
 }
 </script>
-	<p class="box"><h5>Bienvenue sur Nourredine1981.com.............................Bienvenue sur Nourredine1981.com!Cliquez ........................Bienvenue sur Nourredine1981.com.....................</h5></p>
+	<p class="box"><h5>Bienvenue sur Nourredine1981.com.............................Bienvenue sur Nourredine1981.com!Cliquez ........................Bienvenue sur Nourredine1981.com.....................</h5></p>  <p id="motivationalMessage"></p>
+    <p id="lastModified"></p> <!-- Affichage de la date de dernière modification -->
+    <p id="visitorCount"></p> <!-- Affichage du compteur de visiteurs -->
+
+    <!-- Enregistrer le service worker -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('Service Worker registration failed: ', err);
+                });
+        });
+    }
+    </script>
 	<a href="https://exodeinformatique.wixsite.com/exode-informatique/liberte"><br><h5>Notions de Philosphie </h5></a>
 	<p>		
 		<hr>
