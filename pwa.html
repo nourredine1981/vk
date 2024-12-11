@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Page de Nourredine</title>
-    <link rel="manifest" href="pwa.json">
+    <title>PWA de Nourredine</title>
+    <link rel="manifest" href="manifest.json">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -45,7 +45,7 @@
 
       gtag('config', 'G-6Y4EQBYXB4');
     </script>
-    
+
     <!-- Google Tag Manager -->
     <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -112,7 +112,21 @@
     </script>
 </head>
 <body>
-    <h1>Page de Nourredine</h1>
+    <h1>PWA de Nourredine</h1>
     <p id="motivationalMessage"></p>
+
+    <!-- Enregistrer le service worker -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('Service Worker registration failed: ', err);
+                });
+        });
+    }
+    </script>
 </body>
 </html>
