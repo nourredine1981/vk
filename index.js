@@ -218,6 +218,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageElement = document.getElementById('message');
     messageElement.textContent = 'Hello, World! Ce message est généré par index.js';
 });
+const express = require('express');
+const { exec } = require('child_process');
+
+const app = express();
+const port = 3000;
+
+app.use(express.static('public'));
+
+app.get('/run-java', (req, res) => {
+    exec('java MyJavaClass', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Erreur: ${error.message}`);
+            return res.status(500).send('Erreur du serveur');
+        }
+        if (stderr) {
+            console.error(`Erreur: ${stderr}`);
+            return res.status(500).send('Erreur du serveur');
+        }
+        res.send(`Résultat: ${stdout}`);
+    });
+});
+
+app.listen(port, () => {
+    console.log(`Serveur en cours d'exécution sur http://localhost:${port}`);
+});
 
 // Remplacez 'YOUR_ACCESS_TOKEN' par votre jeton d'accès VK
 const accessToken = 'YOUR_ACCESS_TOKEN';
