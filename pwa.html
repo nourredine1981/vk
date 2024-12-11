@@ -56,6 +56,23 @@
     </script>
     <!-- End Google Tag Manager -->
 
+    <!-- Firebase Configuration -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <script>
+    var firebaseConfig = {
+        apiKey: "API_KEY",
+        authDomain: "PROJECT_ID.firebaseapp.com",
+        databaseURL: "https://PROJECT_ID.firebaseio.com",
+        projectId: "PROJECT_ID",
+        storageBucket: "PROJECT_ID.appspot.com",
+        messagingSenderId: "SENDER_ID",
+        appId: "APP_ID",
+        measurementId: "G-MEASUREMENT_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
     <!-- Fonctions JavaScript pour afficher la date -->
     <script>
     function getLongDateString() {
@@ -89,6 +106,14 @@
 
     window.addEventListener('load', function() {
         document.getElementById('lastModified').textContent = "Dernière modification : " + DocDate();
+        
+        // Compteur de visiteurs
+        var visitorCountRef = firebase.database().ref('visitors/count');
+        visitorCountRef.transaction(function(currentCount) {
+            return (currentCount || 0) + 1;
+        }).then(function(snapshot) {
+            document.getElementById('visitorCount').textContent = "Nombre de visiteurs : " + snapshot.snapshot.val();
+        });
     });
     </script>
 </head>
@@ -96,6 +121,7 @@
     <h1>PWA de Nourredine</h1>
     <p id="motivationalMessage"></p>
     <p id="lastModified"></p> <!-- Affichage de la date de dernière modification -->
+    <p id="visitorCount"></p> <!-- Affichage du compteur de visiteurs -->
 
     <!-- Enregistrer le service worker -->
     <script>
