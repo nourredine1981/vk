@@ -51,7 +51,13 @@
 <!-- Begin
 // http://javascript.internet.com
 
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQDLV8CM');</script>
+<!-- End Google Tag Manager -->
 
 function createHexArray(n) {
 this.length = n;
@@ -111,7 +117,10 @@ document.write("<FONT COLOR=\"#" + color_h3 + color_h1 + color_h2 + "\">" + text
 
 	
 </head>
-<body>La construction de la réalité sociale
+<body>La construction de la réalité sociale<br><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQDLV8CM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <h1>Appeler du Code Java</h1> <button onclick="callJavaCode()">Exécuter le code Java</button> <p id="result"></p> <script> function callJavaCode() { fetch('/run-java') .then(response => response.text()) .then(data => { document.getElementById('result').textContent = data; }) .catch(error => { console.error('Erreur:', error); document.getElementById('result').textContent = 'Erreur lors de l\'appel du code Java'; }); } </script>
 
 	<table border="0"><tr><td>
