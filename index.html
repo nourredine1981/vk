@@ -8,6 +8,10 @@
 <!-- Begin
 makeRainbow(".........................................Bienvenue sur Nourredine1981.com! Cliquez ICI ..................................................");
 // End -->
+			<table>
+
+				<tr><td>
+																																																																																																																																																																																																																											  
 			<div align="left">																																																																																																																																																																																																																								  
 		<p align="left">
 
@@ -24,7 +28,6 @@ makeRainbow(".........................................Bienvenue sur Nourredine19
     <br><h1>Calculateur d'IMC</h1> <input type="number" id="weight" placeholder="Poids (kg)"> <input type="number" id="height" placeholder="Taille (cm)"> <button onclick="calculateBMI()">Calculer l'IMC</button> <p id="result"></p> <script> function calculateBMI() { const weight = parseFloat(document.getElementById('weight').value); const height = parseFloat(document.getElementById('height').value) / 100; if (isNaN(weight) || isNaN(height) || height <= 0) { document.getElementById('result').textContent = "Veuillez entrer des valeurs valides."; return; } const bmi = weight / (height * height); let interpretation = ""; if (bmi < 18.5) { interpretation = "Insuffisance pondérale"; } else if (bmi < 24.9) { interpretation = "Poids normal"; } else if (bmi < 29.9) { interpretation = "Surpoids"; } else { interpretation = "Obésité"; } document.getElementById('result').textContent = `Votre IMC est ${bmi.toFixed(2)} (${interpretation}).`; } </script><br><br>
   </div>
     <br><h1>Chat en Temps Réel</h1> <ul id="messages"></ul> <form id="form" action=""> <input id="input" autocomplete="off" placeholder="Entrez votre message" /><button id="send">Envoyer</button> </form> <script src="/socket.io/socket.io.js"></script> <script> const socket = io(); document.getElementById('form').addEventListener('submit', function(e) { e.preventDefault(); const input = document.getElementById('input'); if (input.value) { socket.emit('chat message', input.value); input.value = ''; } }); socket.on('chat message', function(msg) { const item = document.createElement('li'); item.textContent = msg; document.getElementById('messages').appendChild(item); window.scrollTo(0, document.body.scrollHeight); }); </script><br><br>
-<h1>Textes Aléatoires</h1> <button onclick="showText('metaphysics')">Afficher un texte de Métaphysique</button> <button onclick="showText('culture')">Afficher un texte de Culture</button> <button onclick="showText('science')">Afficher un texte de Science</button> <p id="text"></p> <script> const texts = { metaphysics: [ "La métaphysique est la branche de la philosophie qui étudie la nature fondamentale de la réalité.", "Aristote a défini la métaphysique comme la science de l'être en tant qu'être.", "La métaphysique explore des questions telles que l'existence, l'identité, le temps et l'espace.", "Descartes a utilisé la métaphysique pour établir la certitude de l'existence de Dieu et de l'âme.", "La métaphysique examine les principes premiers et les causes ultimes des choses.", "Kant a critiqué la métaphysique traditionnelle et a proposé une nouvelle approche basée sur la critique de la raison pure.", "La métaphysique contemporaine inclut des débats sur le réalisme, le nominalisme et le matérialisme.", "La métaphysique est souvent considérée comme une discipline spéculative et abstraite.", "Les questions métaphysiques sont souvent liées à des problèmes épistémologiques et ontologiques.", "La métaphysique continue d'influencer la pensée philosophique et scientifique moderne." ], culture: [ "La culture est l'ensemble des connaissances, des croyances et des comportements d'un groupe social.", "La culture inclut les arts, les traditions, les langues et les valeurs d'une société.", "L'anthropologie culturelle étudie les différentes cultures humaines et leurs évolutions.", "La mondialisation a un impact significatif sur la diffusion et la transformation des cultures.", "La culture populaire englobe les pratiques et les produits culturels accessibles au grand public.", "Les musées et les institutions culturelles jouent un rôle clé dans la préservation du patrimoine culturel.", "La diversité culturelle est une richesse qui favorise l'innovation et la créativité.", "Les festivals et les célébrations culturelles renforcent le sentiment d'appartenance et d'identité.", "La culture numérique transforme les modes de communication et d'expression artistique.", "L'éducation culturelle est essentielle pour promouvoir la compréhension et le respect entre les peuples." ], science: [ "La science est un processus systématique de recherche et de découverte de connaissances sur le monde naturel.", "La méthode scientifique repose sur l'observation, l'expérimentation et la formulation d'hypothèses.", "Galilée est souvent considéré comme le père de la science moderne pour ses contributions à la physique et à l'astronomie.", "La théorie de la relativité d'Einstein a révolutionné notre compréhension de l'espace et du temps.", "La biologie moléculaire étudie les structures et les fonctions des molécules essentielles à la vie.", "La science des matériaux explore les propriétés et les applications des substances naturelles et synthétiques.", "La climatologie est la science qui étudie les variations climatiques et leurs impacts sur l'environnement.", "La science informatique développe des algorithmes et des technologies pour traiter et analyser les données.", "La médecine utilise les connaissances scientifiques pour diagnostiquer et traiter les maladies.", "La science continue de repousser les frontières de la connaissance et d'améliorer notre qualité de vie." ] }; function showText(category) { const randomIndex = Math.floor(Math.random() * texts[category].length); document.getElementById('text').textContent = texts[category][randomIndex]; } </script>
 
     
     
@@ -45,7 +48,7 @@ makeRainbow(".........................................Bienvenue sur Nourredine19
 
 				</p>
 				</div>
-			
+	</td><td>
 																																																																																																																																																																																																																											  
 	<p align ="center">																																																																																																																																																																																																																										  
 </script>
@@ -165,8 +168,7 @@ makeRainbow(".........................................Bienvenue sur Nourredine19
 </font>
 </strong>
 </h1>
-	
-<script language="JavaScript">
+	</td></tr><tr><td><script language="JavaScript">
 function getLongDateString()
 {monthNames = new Array("Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre");
 dayNames = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
@@ -204,7 +206,8 @@ document.writeln(DocDate(),"</b></font>");
 </script><hr>
 
 
-		
+		</td></tr><td></td></tr>
+<tr><td>
 		
 		
 		
@@ -216,7 +219,12 @@ document.writeln(DocDate(),"</b></font>");
             window.location.href = "nourredine.html";
         }
     </script>
-		<hr><hr>Theology at the University of Pretoria – 100 years
+	
+</td>td></tr>
+
+		<tr><td>
+	
+	<hr><hr>Theology at the University of Pretoria – 100 years
 
 OAPEN
 https://library.oapen.org › bitstream
@@ -245,7 +253,7 @@ Sep 23, 2016 — an ivory tower. He sees in this the need for the contextualisat
 	<img src="./t16.jpg"><img src="./t17.png"><img src="./t18.jpg"><img src="./t19.jpg"><img src="./t20.jpg">
 	<hr><hr>
 
-	
+		</td></tr><tr><td>
 
 	<hr><hr>
 
@@ -284,8 +292,7 @@ Translate this page
 Jan 22, 2018 — ... PARADIS DU PAPIER TAJIOUE PARALLELES ACTIONS ... ZAHER SOCIETE MAROCAINE DE DIETETIQU ... noureddine.sammar@bnpparibas.com k.jabiri ...
 <br><br>
 	<hr><hr>
-	
-	
+		</td><td>	
 	<br><br><hr><hr><br><br><hr><hr><br>
 	La construction de la réalité sociale<br><!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQDLV8CM"
@@ -384,7 +391,7 @@ Translate this page
 
 	<br><br>	
 
-<!-- End Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) --></td><td></td><tr><td>
 <h1>Appeler du Code Java</h1> <button onclick="callJavaCode()">Exécuter le code Java</button> <p id="result"></p> <script> function callJavaCode() { fetch('/run-java') .then(response => response.text()) .then(data => { document.getElementById('result').textContent = data; }) .catch(error => { console.error('Erreur:', error); document.getElementById('result').textContent = 'Erreur lors de l\'appel du code Java'; }); } </script>
 
 	<table border="0"><tr><td>
@@ -402,8 +409,9 @@ Translate this page
 
     Informations Financières</h1> <p id="info"></p> <script> const financialData = [ "DAX: 20,329.16 -0.083%", "FTSE 100: 8,280.36 -0.86%", "CAC 40: 7,394.78 -1.14%", "IBEX 35: 11,965.50 -0.38%", "STOXX 50: 4,951.74 -0.68%", "TSLA: $400.99 +2.87%", "Index CAC 40: 7,394.78 -1.14%", "Index SBF 120: 5,607.05 -1.01%", "AI L'Air Liquide: €160.04 -1.00%", "RNO Renault: €44.10 +0.78%", "Index Dow Jones: 44,247.83 -0.35%", "Index S&P 500: 6,034.91 +0.30%", "SAN Sanofi: €91.75 +0.076%", "GLE Societe Generale: €26.68 +0.26%", "TSLA Tesla: $400.99 +2.87%", "AI L'Air Liquide: €160.04 -1.00%", "DG Vinci: €100.95 +0.20%", "ORA Orange: €9.71 +0.45%", "ALNOV Novacyt: €0.62 +0.48%", "GNFT Genfit: €3.66 +2.40%", "BNP BNP Paribas: €59.70 +0.60%", "VK Vallourec: €16.68 +1.65%", "SGO Saint Gobain: €89.18 +0.78%", "AB AB Science: €0.78 +0.76%" ]; function updateInfo() { const randomIndex = Math.floor(Math.random() * financialData.length); document.getElementById('info').textContent = financialData[randomIndex]; } setInterval(updateInfo, 10000); // Change le texte toutes les 10 secondes updateInfo(); // Affiche immédiatement une première information </script>
    
-</td><td>
-
+</td><td></td></tr>tr>
+	</table>
+		
    
 
 
@@ -416,15 +424,14 @@ Translate this page
 
   <br>
 
-</td><td>
+
 	
 
 	<h1>Citas de Metafísica Freudiana</h1> <button onclick="showQuote()">Mostrar una cita</button> <p id="quote"></p> <script> const quotes = [ "La metafísica es la rama de la filosofía que estudia la naturaleza fundamental de la realidad.", "Freud definió la metapsicología como el estudio de los procesos mentales más allá de la conciencia.", "La metapsicología freudiana explora conceptos como el inconsciente, el ello, el yo y el superyó.", "Freud utilizó la metapsicología para establecer la certeza de la existencia del inconsciente.", "La metapsicología examina los principios primeros y las causas últimas de los fenómenos psíquicos.", "Freud criticó la metafísica tradicional y propuso una nueva aproximación basada en la psicoanálisis.", "La metapsicología contemporánea incluye debates sobre el realismo, el nominalismo y el materialismo.", "La metapsicología es considerada una disciplina especulativa y abstracta.", "Las preguntas metapsicológicas están a menudo relacionadas con problemas epistemológicos y ontológicos.", "La metapsicología sigue influyendo en el pensamiento filosófico y científico moderno." ]; function showQuote() { const randomIndex = Math.floor(Math.random() * quotes.length); document.getElementById('quote').textContent = quotes[randomIndex]; } </script>
      
 		</td>
-</tr>
- 
- <tr><td> <div id="content"> <h1>Bienvenue sur mon projet Node.js</h1><br> <h1>Citationes Metaphysicae Freudianae</h1> <button onclick="showQuote()">Monstra citationem</button> <p id="quote"></p> <script> const quotes = [ "Metaphysica est pars philosophiae quae naturam fundamentalem rerum investigat.", "Freud metapsychologiam definivit ut studium processuum mentis ultra conscientiam.", "Metapsychologia Freudiana conceptus explorat ut inconscientem, id, ego et super-ego.", "Freud metapsychologiam usus est ad certitudinem existentiae inconscientis statuendam.", "Metapsychologia principia prima et causas ultimas rerum psychicorum examinat.", "Freud metaphysicam traditam reprehendit et novam rationem psychoanalysi fundatam proposuit.", "Metapsychologia hodierna disputationes de realismo, nominalismo et materialismo includit.", "Metapsychologia disciplina speculativa et abstracta habetur.", "Quaestiones metapsychologicae saepe cum problematibus epistemologicis et ontologicis coniunguntur.", "Metapsychologia cogitationem philosophicam et scientificam modernam influere pergit." ]; function showQuote() { const randomIndex = Math.floor(Math.random() * quotes.length); document.getElementById('quote').textContent = quotes[randomIndex]; } </script>
+
+<div id="content"> <h1>Bienvenue sur mon projet Node.js</h1><br> <h1>Citationes Metaphysicae Freudianae</h1> <button onclick="showQuote()">Monstra citationem</button> <p id="quote"></p> <script> const quotes = [ "Metaphysica est pars philosophiae quae naturam fundamentalem rerum investigat.", "Freud metapsychologiam definivit ut studium processuum mentis ultra conscientiam.", "Metapsychologia Freudiana conceptus explorat ut inconscientem, id, ego et super-ego.", "Freud metapsychologiam usus est ad certitudinem existentiae inconscientis statuendam.", "Metapsychologia principia prima et causas ultimas rerum psychicorum examinat.", "Freud metaphysicam traditam reprehendit et novam rationem psychoanalysi fundatam proposuit.", "Metapsychologia hodierna disputationes de realismo, nominalismo et materialismo includit.", "Metapsychologia disciplina speculativa et abstracta habetur.", "Quaestiones metapsychologicae saepe cum problematibus epistemologicis et ontologicis coniunguntur.", "Metapsychologia cogitationem philosophicam et scientificam modernam influere pergit." ]; function showQuote() { const randomIndex = Math.floor(Math.random() * quotes.length); document.getElementById('quote').textContent = quotes[randomIndex]; } </script>
     <h1>EVOLVE24 New York</h1> <button onclick="showMessage()">Afficher le message</button> <p id="message"></p> <script> const message = "Day 2 of #EVOLVE24 New York is underway with a powerful opening session from Cloudera's Charles Sansbury, CEO; Frank O'Dowd, Chief Revenue Officer."; function showMessage() { document.getElementById('message').textContent = message; } 
     
     <br>
@@ -611,8 +618,6 @@ Translate this page
     </script></td></tr>
  
  
- 
- </table><br>
 	Current Trends in MathematicsCurrent Trends in Mathematics and Future ...<hr>
 <a href="./bookmarks.html">bookmarks</a><br>
 <hr>
@@ -622,21 +627,21 @@ GitHub
 https://github.com › pfrcks › clickbait-detection › blob
 Blog. Solutions. By size. Enterprise · Teams ... Ivory Coast Stanford just made tuition free for ... Zaher: Saudi Arabia is about to behead a teenage ...
 
-
+<br><br>
 username-anarchy/names/facebook/firstnames-top10000. ...
-
+<br><br>
 GitHub
 https://github.com › username-anarchy › blob › master
 ... ivory bunga selene shella viraj ly janne fenny ... zaher rosette norie kimmi jourdan jamee rebel ... GitHub, Inc. Footer navigation. Terms · Privacy ...
 
 contests-tuenti-challenge-2/challenge9/documents/0039 ...
-
+<br><br>
 GitHub
 https://github.com › igbopie › blob › master › documents
 ... GitHub Skills · Blog. Solutions. By company size ... ivory trade and an agricultural research station ... Zaher and Mazen Eido was a good swimmer and the ...
 
 singular.unigrams.txt
-
+<br><br>
 GitHub
 https://github.com › stanford › nlp › models › dcoref › s...
 ... blob bloc bloch blocher blockade blockage ... ivory ivx iw iwa iwakuma iwamoto iwan iwanowska ... zaher zahid zahir zahira zahm zahn zahner zahorik ...
@@ -645,111 +650,111 @@ https://github.com › stanford › nlp › models › dcoref › s...
 
 
 	Named-Entity-Recognition/ner_aleju_test.ipynb at master
-
+<br><br>
 GitHub
 https://github.com › Named-Entity-Recognition › blob
 GitHub Copilot. Write better code with AI ... Ivory 77 unless 77 Labor 76 Nigerian 76 firm 76 ... Zaher 1 lifeline 1 guideline 1 vaccinated 1 Rosal ...
 
 AIDA-YAGO2_entities_and_links.json
-
+<br><br>
 GitHub
 https://github.com › analyses › stats_per_surface_form
 Blog. Solutions. By company size. Enterprises · Small and ... Ivory Coast": {"http://en.wikipedia.org/wiki/C ... Zaher": {"http://en.wikipedia.org/wiki ...
 
 LGB-Celebrities/lgbList.csv at main
-
+<br><br>
 GitHub
 https://github.com › nanhsin › LGB-Celebrities › blob › l...
 ... Blog. Solutions. By company size. Enterprises · Small ... Ivory, b. 1928, American, Filmmaker, G[48]. 4617 ... Zaher, b. 1974, Afghan, Writer, LGBT activist, G[323].
 
 journalistdeaths/cpj-database.csv at master
-
+<br><br>
 GitHub
 https://github.com › ivofurman › journalistdeaths › blob
 ... Ivory Coast, Radio France Internationale, France ... Blog do D_cio, Brazil, Print, Internet, Internet ... Zaher Mtawe'e, Male, Syria, Zebdine Coordination ...
 
 BollywoodVisualization/bollywood_kaggle.csv at master
-
+<br><br>
 GitHub
 https://github.com › BollywoodVisualization › blob › bo...
 ... GitHub Skills · Blog. Solutions. By company size ... Zaher a.k.a. Wine And Woman,Anand Prasad Kapoor ... Ivory,"shashi,naidu,kapoor,jabeen,harindranath ...
 
 allocine_ratings_prediction/scrapperv11_401_600.csv at ...
-
+<br><br>
 GitHub
 https://github.com › Charif-C › blob › master › scrapper...
 GitHub Copilot. Write better code with AI · Security. Find ... James Ivory ;, 3.6. 944. 942, Fabrice Luchini ... Faycal Safi ; Brahim Tekfa ; Sarah Zaher ;, 1 ...
 
 movies/films.csv at master · adamgreig/movies
-
+<br><br>
 GitHub
 https://github.com › adamgreig › movies › blob › films
 ... Blog. Solutions. By company size. Enterprises ... ivory towers of power. Taking Bond around the ... Zaher as Zahir (as Baktash Khadem Zaher) Ernest ...
 
 Journalists-Killed/journalists_killed_completed_version.csv ...
-
+<br><br>
 GitHub
 https://github.com › Journalists-Killed › blob › master › j...
 Contribute to kaiwenxu94/Journalists-Killed development by creating an account on GitHub ... Duékoué , Ivory Coast ... https://cpj.org/data/people/zaher-al-shurqat/ ...
 
 smh_r2_l432_w0.04_s3_o0.9_m5reuters100000_full.topics
-
+<br><br>
 GitHub
 https://github.com › master › example_topics › reuters
 ... ivory harm yasser jordanian tirana moroccan ... blob yogi barnacle outshone microgravity ... zaher seyed sandi adnan jassem sharipov sami woodwork ...
 
 video2gif_dataset/video_tags.txt at master · gyglim ...
-
+<br><br>
 GitHub
 https://github.com › gyglim › blob › master › video_tags
 ... blog (website category) zRqijosbUX4; the chris ... ivory; victoria; jazzgail kim; #wweclassics ... zaher moukahal; bodybuilding supplement (medical ...
 
 
 Email-To-Name-Python/email-to-name-standalone.py at ...
-
+<br><br>
 GitHub
 https://github.com › ArrivestePR › blob › master › email...
 GitHub Copilot. Write better code with AI · Security ... zaher', 'allah', 'evilio', 'allan', 'monsif ... ivory', 'secundino', 'rajae', 'koji', 'reyad ...
 
 Named colors in matplotlib - python
-
+<br><br>
 Stack Overflow
 https://stackoverflow.com › questions › named-colors-i...
 @ComputerScientist Yes, according to this Github ... ivory': '#FFFFF0', 'khaki': '#F0E68C ... Mahmoud A Zaher's user avatar · Mahmoud A ZaherMahmoud ...
 6 answers
  
 ·
- 
+<br><br> 
 Top answer: 
 I constantly forget the names of the colors I want to use and keep coming back to this ...
 Missing: blob/ ‎| Show results with: blob/
 
 real.planet.world-heritage.json
-
+<br><br>
 GitHub
 https://gist.github.com › rsicarelli
 ... blob/master/data/places/real.planet.world ... ivory trade with Sudan. It also dominated the ... Zaher Ghazi (son of Saladin) in an annex to a madrasa ...
 
 Hangman/corpus.txt at master
-
+<br><br>
 GitHub
 https://github.com › saaamxzy › Hangman › blob › corpus
 ... BLOBS 23 BLOCH 372 BLOCK 4800 BLOCS 156 BLOHM 33 ... IVORY 734 IZUMI 9 JABER 125 JACEK 56 JACKS 47 ... ZAHER 15 ZAHIR 52 ZAIRE 325 ZAKHO 58 ZANDI 24 ...
 
 schistoDB/sourceDatasets/sDB_0search.csv at master
-
+<br><br>
 GitHub
 https://github.com › Amelie-TGHN › schistoDB › blob
 Blog. Solutions. By size. Enterprise · Teams · Startups ... [Intestinal parasites in children in Biankouma, Ivory ... Zaher, A.A., Salama, H.H., Safwat, M.I., 2011.
 
 surnames.json - rossgoodwin/american-names
-
+<br><br>
 GitHub
 https://github.com › american-names › blob › master › s...
 ... Blog. Solutions. By company size ... Ivory","Corn","Thorson","Baxley","Hasty","Heilman ... Zaher","Autio","Barnhard","Blahut","Bord","Boxell ...
 
 phonetic_search/names.csv at master
-
+<br><br>
 GitHub
 https://github.com › olsgaard › phonetic_search › blob
 ... Blog. Solutions. By company size. Enterprises ... ZAHER, TRACEY, CHAPLA, TIARKS, EKIZIAN, DEWERFF ... IVORY, BELLINI, VERHOFF, BECHTLER, DONAGHE, NIERE ...
@@ -760,13 +765,13 @@ https://pmc.ncbi.nlm.nih.gov › articles › PMC10906927
 by F Zheng · 2024 · Cited by 1 — For clarity, the Elg1-RFC pentamer is colored ivory. ... blob particle picking (70- to 150-Å diameter) ... Zaher M. S., Shirbini A., Blanco F. J. ...
 
 NHM-specimens/notes/newout/zt2010.txt at master
-
+<br><br>
 GitHub
 https://github.com › rossmounce › NHM-specimens › blob
 ... Blog. Solutions. By company size. Enterprises ... Ivory Coast, on Theobroma cacao, P. Vayssière, 1 ... Zaher and C.C. Mello (MZUSP); and N. Zanella 2010 ...
 
 map-testb-fromapi-20140227.tsv
-
+<br><br>
 GitHub
 https://github.com › wikilinks › blob › master › mappings
 Blog. Solutions. By company size ... Zaher Khaled Zaher Khaled al-Jaher Kid Brands Kid Brands, Inc. ... Ivory Coast Coat d'Ivory Cote D' Ivoire Cote D ...
@@ -789,46 +794,46 @@ https://github.com › lintool › Ivory › blob › vocab.ar-en...
 May 6, 2018 — A Hadoop toolkit for web-scale information retrieval research - Ivory/data/vocab/vocab.ar-en.en at master · lintool/Ivory.
 
 Ivory/data/vocab/vocab.en-fr.en at master · lintool/Ivory
-
+<br><br>
 GitHub
 https://github.com › lintool › Ivory › blob › vocab.en-fr....
 May 6, 2018 — A Hadoop toolkit for web-scale information retrieval research - Ivory/data/vocab/vocab.en-fr.en at master · lintool/Ivory.
 vocab.en-de.en - lintool/Ivory
 Firtnames/male.txt at master
-
+<br><br>
 GitHub
 https://github.com › kuranai › Firtnames › blob › male
 A list of firstnames. Contribute to kuranai/Firtnames development by creating an account on GitHub.
 
 target-bucket-api-example/addresses.csv at master
-
+<br><br>
 GitHub
 https://github.com › target-bucket-api-example › blob
 ... Blog. Solutions. By company size. Enterprises ... ZAHER, 11701 S SUNNY STONE DR, 84009. 2419. ISBELL ... IVORY, 4741 W COPPER SKY DR, 84009. 8109. LEON, 4742 W ...
 
 Spray/name-lists/statistically-likely-usernames/john.txt ...
-
+<br><br>
 GitHub
 https://github.com › Greenwolf › Spray › blob › master
 A Password Spraying tool for Active Directory Credentials by Jacob Wilkin(Greenwolf) - Spray/name-lists/statistically-likely-usernames/john.txt at master ...
 
 xmlgen/xmlgen.c at main · eliben/xmlgen
-
+<br><br>
 GitHub
 https://github.com › eliben › xmlgen › blob › master › x...
 ... Blog. Solutions. By company size. Enterprises · Small and ... Zaher","Viresh","Kohichi","Svetozar","Keqin ... Ivory Coast","Jamaica","Japan","Jordan ...
 
 texty.ml/nyt-main.ipynb at master · TextyML ...
-
+<br><br>
 GitHub
 https://github.com › TextyML › texty.ml › blob › nyt-m...
 ... Zaher al-Majdalawi, 13, were killed, Palestinian medical workers said. ... Blog Tsunami Debate\n ', 'Good ... Ivory Bill Report Is Called 'Faith-Based ...
 
 chatbot_web/bot/maps/gendername.map at master
-
+<br><br>
 GitHub
 https://github.com › peterolson › chatbot_web › blob › g...
-Blog. Solutions. By company size. Enterprises · Small and ... Ivory","F"],["Franchesca","F"],["Cherelle","F ... Zaher","M"],["Zafir","M"],["Zachaery","M ...
+Blog. Solutions. By company size. Enterprises · Small and ... Ivory","F"],["Franchesca","F"],["Cherelle","F ... Zaher","M"],["Zafir","M"],["Zachaery","M ...<br><br>
 GitHub
 https://github.com › lintool › Ivory › blob › master › data
 May 6, 2018 — A Hadoop toolkit for web-scale information retrieval research - Ivory/data/vocab/vocab.en-de.en at master · lintool/Ivory. ... blob bloc bloc.
