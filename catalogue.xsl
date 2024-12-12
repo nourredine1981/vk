@@ -41,27 +41,4 @@
         
         <!-- Utilisation de math:highest et math:min -->
         <xsl:variable name="values" select="'1 3 5 2 4'"/>
-        <p>Valeur la plus élevée: <xsl:value-of select="math:highest($values)"/></p>
-        <p>Valeur la plus basse: <xsl:value-of select="math:min($values)"/></p>
-        
-        <!-- Utilisation de regexp:replace -->
-        <p>Remplacement de texte: <xsl:value-of select="regexp:replace('Hello World', 'World', 'EXSLT')"/></p>
-        
-        <!-- Utilisation de set:distinct -->
-        <xsl:variable name="items" select="'a b a c b'"/>
-        <p>Valeurs uniques: <xsl:value-of select="set:distinct($items)"/></p>
-        
-        <!-- Utilisation de str:split -->
-        <xsl:variable name="text" select="'one,two,three'"/>
-        <xsl:variable name="splitText" select="str:split($text, ',')"/>
-        <p>Texte divisé: 
-          <xsl:for-each select="$splitText">
-            <xsl:value-of select="."/>
-            <xsl:text> </xsl:text>
-          </xsl:for-each>
-        </p>
-      </body>
-    </html>
-  </xsl:template>
-  
-</xsl:stylesheet>
+        <p>Valeur la plus élevée: <xsl:value-of select="math:highest($
