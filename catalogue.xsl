@@ -36,7 +36,7 @@
         <h2>Utilisation des Fonctions EXSLT</h2>
         
         <!-- Utilisation de exsl:node-set -->
-        <xsl:variable name="myNodeset" select="exsl:node-set('<root>&lt;item>1&lt;/item>&lt;item>2&lt;/item></root>')"/>
+        <xsl:variable name="myNodeset" select="exsl:node-set('&lt;root>&lt;item>1&lt;/item>&lt;item>2&lt;/item>&lt;/root>')"/>
         <p>exsl:node-set: <xsl:value-of select="$myNodeset/root/item"/></p>
         
         <!-- Utilisation de math:highest et math:min -->
