@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    # The branches below must be a subset of the branches above
+    # Les branches ci-dessous doivent être un sous-ensemble des branches ci-dessus
     branches: [ "main" ]
   schedule:
     - cron: '0 0 * * 1'
