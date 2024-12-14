@@ -1,0 +1,13 @@
+<?xml-stylesheet type="text/xsl" href="catalogue.xsl"?>
+<catalogue>
+  <livre>
+    <titre>Apprendre le Java</titre>
+    <auteur>Jean Dupont</auteur>
+    <prix>29.99</prix>
+  </livre>
+  <livre>
+    <titre>Guide de l'EXSLT</titre>
+    <auteur>Marie Curie</auteur>
+    <prix>39.99</prix>
+  </livre>
+</catalogue>
