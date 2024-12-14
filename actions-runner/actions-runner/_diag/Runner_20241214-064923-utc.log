@@ -1,0 +1,99 @@
+[2024-12-14 06:49:23Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2024-12-14 06:49:23Z INFO HostContext] Well known directory 'Bin': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin'
+[2024-12-14 06:49:23Z INFO HostContext] Well known directory 'Root': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner'
+[2024-12-14 06:49:23Z INFO HostContext] Well known config file 'Credentials': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\.credentials'
+[2024-12-14 06:49:23Z INFO HostContext] Well known directory 'Bin': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin'
+[2024-12-14 06:49:23Z INFO HostContext] Well known directory 'Root': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner'
+[2024-12-14 06:49:23Z INFO HostContext] Well known config file 'Runner': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\.runner'
+[2024-12-14 06:49:23Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2024-12-14 06:49:23Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19045.
+[2024-12-14 06:49:23Z INFO Listener] Version: 2.321.0
+[2024-12-14 06:49:23Z INFO Listener] Commit: e249007931b7c8e857797fa259c167f0bd4f997a
+[2024-12-14 06:49:23Z INFO Listener] Culture: fr-FR
+[2024-12-14 06:49:23Z INFO Listener] UI Culture: fr-FR
+[2024-12-14 06:49:23Z INFO HostContext] Well known directory 'Bin': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin'
+[2024-12-14 06:49:23Z INFO HostContext] Well known directory 'Root': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner'
+[2024-12-14 06:49:23Z INFO Listener] Validating directory permissions for: 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner'
+[2024-12-14 06:49:23Z INFO CommandLineParser] Parse
+[2024-12-14 06:49:23Z INFO CommandLineParser] Parsing 1 args
+[2024-12-14 06:49:23Z INFO CommandLineParser] parsing argument
+[2024-12-14 06:49:23Z INFO CommandLineParser] HasArgs: False
+[2024-12-14 06:49:23Z INFO CommandLineParser] Adding Command: configure
+[2024-12-14 06:49:23Z INFO Listener] Arguments parsed
+[2024-12-14 06:49:24Z INFO Runner] ExecuteCommand
+[2024-12-14 06:49:24Z INFO ConfigurationStore] currentAssemblyLocation: C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin\Runner.Listener.dll
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Bin': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin'
+[2024-12-14 06:49:24Z INFO ConfigurationStore] binPath: C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Bin': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin'
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Root': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner'
+[2024-12-14 06:49:24Z INFO ConfigurationStore] RootFolder: C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Bin': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin'
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Root': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner'
+[2024-12-14 06:49:24Z INFO HostContext] Well known config file 'Runner': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\.runner'
+[2024-12-14 06:49:24Z INFO ConfigurationStore] ConfigFilePath: C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\.runner
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Bin': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin'
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Root': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner'
+[2024-12-14 06:49:24Z INFO HostContext] Well known config file 'Credentials': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\.credentials'
+[2024-12-14 06:49:24Z INFO ConfigurationStore] CredFilePath: C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\.credentials
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Bin': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin'
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Root': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner'
+[2024-12-14 06:49:24Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\.credentials_migrated'
+[2024-12-14 06:49:24Z INFO ConfigurationStore] MigratedCredFilePath: C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\.credentials_migrated
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Bin': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\bin'
+[2024-12-14 06:49:24Z INFO HostContext] Well known directory 'Root': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner'
+[2024-12-14 06:49:24Z INFO HostContext] Well known config file 'Service': 'C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\.service'
+[2024-12-14 06:49:24Z INFO ConfigurationStore] ServiceConfigFilePath: C:\github\projet1branchmaster\nourredine1981\vk\actions-runner\actions-runner\.service
+[2024-12-14 06:49:24Z INFO CommandSettings] Flag 'help': 'False'
+[2024-12-14 06:49:24Z INFO CommandSettings] Flag 'version': 'False'
+[2024-12-14 06:49:24Z INFO CommandSettings] Flag 'commit': 'False'
+[2024-12-14 06:49:24Z INFO CommandSettings] Flag 'check': 'False'
+[2024-12-14 06:49:24Z INFO CommandSettings] Command 'configure': 'True'
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE: 
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE: |        ____ _ _   _   _       _          _        _   _                      |
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE: |       / ___(_) |_| | | |_   _| |__      / \   ___| |_(_) ___  _ __  ___      |
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE: |      | |  _| | __| |_| | | | | '_ \    / _ \ / __| __| |/ _ \| '_ \/ __|     |
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE: |      | |_| | | |_|  _  | |_| | |_) |  / ___ \ (__| |_| | (_) | | | \__ \     |
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE: |       \____|_|\__|_| |_|\__,_|_.__/  /_/   \_\___|\__|_|\___/|_| |_|___/     |
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE: |                                                                              |
+[2024-12-14 06:49:24Z INFO Terminal] WRITE: |                       
+[2024-12-14 06:49:24Z INFO Terminal] WRITE: Self-hosted runner registration
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE:                         |
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE: |                                                                              |
+[2024-12-14 06:49:24Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2024-12-14 06:49:24Z INFO ConfigurationManager] ConfigureAsync
+[2024-12-14 06:49:24Z INFO CommandSettings] Flag 'generateServiceConfig': 'False'
+[2024-12-14 06:49:24Z INFO ConfigurationStore] IsConfigured()
+[2024-12-14 06:49:24Z INFO ConfigurationStore] IsConfigured: False
+[2024-12-14 06:49:24Z INFO ConfigurationManager] Is configured: False
+[2024-12-14 06:49:24Z INFO CommandSettings] Arg 'url': ''
+[2024-12-14 06:49:24Z INFO CommandSettings] Flag 'unattended': 'False'
+[2024-12-14 06:49:24Z INFO PromptManager] ReadValue
+[2024-12-14 06:49:24Z INFO Terminal] WRITE: What is the URL of your repository? 
+[2024-12-14 06:49:24Z INFO Terminal] READ LINE
+[2024-12-14 06:49:48Z INFO Terminal] Read value: 'nourredine1981.github.Com/vk/'
+[2024-12-14 06:49:48Z INFO PromptManager] Invalid value.
+[2024-12-14 06:49:48Z INFO Terminal] WRITE LINE: Entered value is invalid
+[2024-12-14 06:49:48Z INFO Terminal] WRITE: What is the URL of your repository? 
+[2024-12-14 06:49:48Z INFO Terminal] READ LINE
+[2024-12-14 06:50:04Z INFO Terminal] Read value: 'nourredine1981.github.Com/vk'
+[2024-12-14 06:50:04Z INFO PromptManager] Invalid value.
+[2024-12-14 06:50:04Z INFO Terminal] WRITE LINE: Entered value is invalid
+[2024-12-14 06:50:04Z INFO Terminal] WRITE: What is the URL of your repository? 
+[2024-12-14 06:50:04Z INFO Terminal] READ LINE
+[2024-12-14 06:50:36Z INFO Terminal] Read value: 'https://github.com/nourredine1981/vk'
+[2024-12-14 06:50:36Z INFO CommandSettings] Arg 'token': ''
+[2024-12-14 06:50:36Z INFO CommandSettings] Flag 'unattended': 'False'
+[2024-12-14 06:50:36Z INFO PromptManager] ReadValue
+[2024-12-14 06:50:36Z INFO Terminal] WRITE: What is your runner register token? 
+[2024-12-14 06:50:36Z INFO Terminal] READ SECRET
+[2024-12-14 06:50:42Z INFO Terminal] Read value: '***'
+[2024-12-14 06:50:43Z ERR  Terminal] WRITE ERROR: Http response code: NotFound from 'POST https://api.github.com/actions/runner-registration' (Request Id: 52E2:19A019:13936D2:141E8B3:675D2AC1)
+[2024-12-14 06:50:43Z ERR  Terminal] WRITE ERROR: {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[2024-12-14 06:50:43Z ERR  Runner] System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at GitHub.Runner.Listener.Configuration.ConfigurationManager.GetTenantCredential(String githubUrl, String githubToken, String runnerEvent)
+   at GitHub.Runner.Listener.Configuration.ConfigurationManager.ConfigureAsync(CommandSettings command)
+   at GitHub.Runner.Listener.Runner.ExecuteCommand(CommandSettings command)
+[2024-12-14 06:50:43Z ERR  Terminal] WRITE ERROR: Response status code does not indicate success: 404 (Not Found).
+[2024-12-14 06:50:43Z INFO Listener] Runner execution has finished with return code 1
