@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <?xml-stylesheet type="text/xsl" href="catalogue.xsl"?>
 <catalogue>
   <livre>
@@ -12,6 +14,26 @@
     <prix>39.99</prix>
   </livre>
 </catalogue>
+=======
+=======
+>>>>>>> origin/vk
+<?xml-stylesheet type="text/xsl" href="catalogue.xsl"?>
+<catalogue>
+  <livre>
+    <titre>Apprendre le Java</titre>
+    <auteur>Jean Dupont</auteur>
+    <prix>29.99</prix>
+  </livre>
+  <livre>
+    <titre>Guide de l'EXSLT</titre>
+    <auteur>Marie Curie</auteur>
+    <prix>39.99</prix>
+  </livre>
+</catalogue>
+<<<<<<< HEAD
+>>>>>>> update
+=======
+>>>>>>> origin/vk
 =======
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"

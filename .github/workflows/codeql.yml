@@ -1,10 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 name: "CodeQL"
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
-    # Les branches ci-dessous doivent être un sous-ensemble des branches ci-dessus
+    # The branches below must be a subset of the branches above
     branches: [ "main" ]
   schedule:
     - cron: '0 0 * * 1'
@@ -38,3 +40,54 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
+=======
+=======
+>>>>>>> origin/vk
+name: "CodeQL"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+<<<<<<< HEAD
+    # The branches below must be a subset of the branches above
+=======
+    # Les branches ci-dessous doivent être un sous-ensemble des branches ci-dessus
+>>>>>>> origin/vk
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 0 * * 1'
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'javascript', 'python', 'ruby', 'go' ]
+        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v2
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
+<<<<<<< HEAD
+>>>>>>> update
+=======
+>>>>>>> origin/vk

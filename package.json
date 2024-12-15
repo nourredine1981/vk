@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/vk
 {
   "name": "vk",
   "version": "1.0.0",
@@ -17,3 +21,27 @@
   },
   "homepage": "https://github.com/nourredine1981/vk#readme"
 }
+<<<<<<< HEAD
+=======
+{
+  "name": "vk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nourredine zaher",
+  "license": "ISC",
+  "description": "health",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nourredine1981/vk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nourredine1981/vk/issues"
+  },
+  "homepage": "https://github.com/nourredine1981/vk#readme"
+}
+>>>>>>> update
+=======
+>>>>>>> origin/vk
