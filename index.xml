@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+<?xml-stylesheet type="text/xsl" href="catalogue.xsl"?>
+<catalogue>
+  <livre>
+    <titre>Apprendre le Java</titre>
+    <auteur>Jean Dupont</auteur>
+    <prix>29.99</prix>
+  </livre>
+  <livre>
+    <titre>Guide de l'EXSLT</titre>
+    <auteur>Marie Curie</auteur>
+    <prix>39.99</prix>
+  </livre>
+</catalogue>
+=======
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:exsl="http://exslt.org/common"
@@ -56,3 +71,4 @@
   </xsl:template>
 </xsl:stylesheet>
 
+>>>>>>> b58451c (mise a jour)

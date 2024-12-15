@@ -1,9 +1,21 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Scripts javascript : Aper�u</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<br /><p class="tt" >Date de mise � jour d'un document</p><br /><br />
+
+<script language="JavaScript">
+function getLongDateString()
+{monthNames = new Array("Janvier","F�vrier","Mars","Avril","Mai","Juin","Juillet","Ao�t","Septembre","Octobre","Novembre","D�cembre");
+=======
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
- HEAD
- HEAD
     <title>Page de Nourredine</title>
     <style>
         body {
@@ -112,6 +124,7 @@ makeRainbow("Bienvenue sur Nourredine1981.com!");
 <script language="JavaScript">
 function getLongDateString()
 {monthNames = new Array("Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre");
+>>>>>>> 9cb968c (Initial commit)
 dayNames = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
 	dayOfWeek = this.getDay();
 	day = dayNames[dayOfWeek];
@@ -142,6 +155,15 @@ if (secOffset == 0 || secOffset == null) //Opera3.2
 </script>
 
 <script language="JavaScript">
+<<<<<<< HEAD
+document.write(" <font face=Verdana size=2 color=#000080>Derni�re mise � jour : <b>");
+document.writeln(DocDate(),"</b></font>");
+</script>
+
+
+</body>
+</html>
+=======
 document.write(" <font face=Verdana size=2 color=#000080>Dernière mise à jour : <b>");
 document.writeln(DocDate(),"</b></font>");
 </script><hr>
@@ -412,171 +434,6 @@ document.writeln(DocDate(),"</b></font>");
           })
           .catch(error => console.error('Erreur de requête:', error));
 
-=======
-    <title>Visualisation des Données VK</title>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <style>
-        .bar {
-            fill: steelblue;
-        }
-    </style>
-=======
- 
->>>>>>> 2f82523 (Update index.html)
-
-<meta charset="UTF-8"> <title>Telepathy Practice Game</title> <style> body { font-family: Arial, sans-serif; } .section { margin-bottom: 20px; } .result { margin-top: 20px; } </style>
-    
-<title>Jeu de Pratique de la Télépathie</title> <style> body { font-family: Arial, sans-serif; } .section { margin-bottom: 20px; } .result { margin-top: 20px; } </style>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .choices {
-            list-style-type: none;
-            padding: 0;
-        }
-        .choices li {
-            margin-bottom: 10px;
-        }
-        .result {
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>     <br><br><br><br><br><br><br><br><br><br><br><br><br> 
-<div id="content"> <h1>Bienvenue sur mon projet Node.js</h1> <p id="message">Chargement...</p> </div> <script src="index.js"></script>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br> 
-
-    <h1>Jeu avec des Images</h1> <canvas id="gameCanvas" width="800" height="600"></canvas> <script> const canvas = document.getElementById('gameCanvas'); const ctx = canvas.getContext('2d'); const image = new Image(); image.src = 'path/to/your/image.png'; // Remplacez par le chemin de votre image let x = canvas.width / 2; let y = canvas.height / 2; const speed = 5; image.onload = () => { drawImage(); }; function drawImage() { ctx.clearRect(0, 0, canvas.width, canvas.height); ctx.drawImage(image, x, y, 50, 50); // Dessine l'image à la position (x, y) avec une taille de 50x50 pixels } window.addEventListener('keydown', (event) => { switch (event.key) { case 'ArrowUp': y -= speed; break; case 'ArrowDown': y += speed; break; case 'ArrowLeft': x -= speed; break; case 'ArrowRight': x += speed; break; } drawImage(); }); </script>
- <br><br><br><br><br><br><br><br><br><br><br><br><br> 
-    
-    <h1>Live d'Or</h1> <div id="chat"></div> <input type="text" id="message" placeholder="Entrez votre message"> <button id="send">Envoyer</button> <script> const chat = document.getElementById('chat'); const messageInput = document.getElementById('message'); const sendButton = document.getElementById('send'); const socket = new WebSocket('ws://localhost:8080'); socket.addEventListener('message', event => { const message = document.createElement('div'); message.textContent = event.data; chat.appendChild(message); chat.scrollTop = chat.scrollHeight; }); sendButton.addEventListener('click', () => { const message = messageInput.value; socket.send(message); messageInput.value = ''; }); messageInput.addEventListener('keypress', event => { if (event.key === 'Enter') { sendButton.click(); } }); </script>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <h1>Chat en Temps Réel</h1> <div id="chat"></div> <input type="text" id="message" placeholder="Entrez votre message"> <button id="send">Envoyer</button> <script> const chat = document.getElementById('chat'); const messageInput = document.getElementById('message'); const sendButton = document.getElementById('send'); const socket = new WebSocket('ws://localhost:8080'); socket.addEventListener('message', event => { const message = document.createElement('div'); message.textContent = event.data; chat.appendChild(message); chat.scrollTop = chat.scrollHeight; }); sendButton.addEventListener('click', () => { const message = messageInput.value; socket.send(message); messageInput.value = ''; }); messageInput.addEventListener('keypress', event => { if (event.key === 'Enter') { sendButton.click(); } }); </script>
-    
-    
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
-    
-    <!DOCTYPE html> <html lang="fr"> <head> <meta charset="UTF-8"> <title>Jeu OpenGL en JavaScript</title> <style> canvas { border: 1px solid black; } </style> </head> <body> <h1>Jeu OpenGL en JavaScript</h1> <canvas id="gameCanvas" width="800" height="600"></canvas> <script> const canvas = document.getElementById('gameCanvas'); const gl = canvas.getContext('webgl'); if (!gl) { alert('WebGL non supporté par votre navigateur'); } const vertexShaderSource = ` attribute vec2 a_position; void main() { gl_Position = vec4(a_position, 0, 1); } `; const fragmentShaderSource = ` void main() { gl_FragColor = vec4(1, 0, 0, 1); // Rouge } `; function createShader(gl, type, source) { const shader = gl.createShader(type); gl.shaderSource(shader, source); gl.compileShader(shader); if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) { console.error(gl.getShaderInfoLog(shader)); gl.deleteShader(shader); return null; } return shader; } const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource); const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource); const program = gl.createProgram(); gl.attachShader(program, vertexShader); gl.attachShader(program, fragmentShader); gl.linkProgram(program); if (!gl.getProgramParameter(program, gl.LINK_STATUS)) { console.error(gl.getProgramInfoLog(program)); gl.deleteProgram(program); return; } const positionBuffer = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer); const positions = [ -0.1, -0.1, 0.1, -0.1, -0.1, 0.1, 0.1, 0.1, ]; gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW); const positionLocation = gl.getAttribLocation(program, 'a_position'); let x = 0; let y = 0; function drawScene() { gl.clear(gl.COLOR_BUFFER_BIT); gl.useProgram(program); gl.enableVertexAttribArray(positionLocation); gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer); gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0); const translation = [x, y]; gl.uniform2fv(gl.getUniformLocation(program, 'u_translation'), translation); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4); } function updatePosition(event) { switch (event.key) { case 'ArrowUp': y += 0.1; break; case 'ArrowDown': y -= 0.1; break; case 'ArrowLeft': x -= 0.1; break; case 'ArrowRight': x += 0.1; break; } drawScene(); } window.addEventListener('keydown', updatePosition); gl.clearColor(0, 0, 0, 1); drawScene(); </script>
-    
-    
-    <button onclick="afficherMessage()">Cliquez-moi</button>
-
-    <script>
-        function afficherMessage() {
-            alert("Bonjour, vous avez cliqué sur le bouton !");
-        }
-    </script><button onclick="afficherMessage()">Cliquez-moi</button>
-
-    <script>
-        function afficherMessage() {
-            alert("Bonjour, vous avez cliqué sur le bouton !");
-        }
-    </script> <button onclick="afficherMessage()">Cliquez-moi</button>
-
-    <script>
-        function afficherMessage() {
-            alert("Bonjour, vous avez cliqué sur le bouton !");
-        }
-    </script><h1>Quiz Informatique</h1> <div id="quiz"></div> <div class="result" id="result"></div> <script> const questions = [ { question: "Quel est le langage de programmation le plus utilisé ?", choices: ["Python", "JavaScript", "Java", "C++"], answer: "JavaScript" }, { question: "Que signifie HTML ?", choices: ["HyperText Markup Language", "HyperText Machine Language", "HyperTool Markup Language", "HyperText and links Markup Language"], answer: "HyperText Markup Language" }, { question: "Quel est le système d'exploitation le plus utilisé sur les ordinateurs de bureau ?", choices: ["Windows", "macOS", "Linux", "Ubuntu"], answer: "Windows" }, { question: "Que signifie CSS ?", choices: ["Cascading Style Sheets", "Computer Style Sheets", "Creative Style Sheets", "Colorful Style Sheets"], answer: "Cascading Style Sheets" }, { question: "Quel est le créateur du langage de programmation Python ?", choices: ["Guido van Rossum", "James Gosling", "Dennis Ritchie", "Bjarne Stroustrup"], answer: "Guido van Rossum" } ]; let currentQuestionIndex = 0; let score = 0; function displayQuestion() { if (currentQuestionIndex >= questions.length) { showScores(); return; } const questionData = questions[currentQuestionIndex]; const quizElement = document.getElementById('quiz'); quizElement.innerHTML = ` <div class="question">${questionData.question}</div> <ul class="choices"> ${questionData.choices.map(choice => ` <li> <button onclick="handleGuess('${choice}')">${choice}</button> </li> `).join('')} </ul> `; } function handleGuess(choice) { const questionData = questions[currentQuestionIndex]; if (choice === questionData.answer) { score++; } currentQuestionIndex++; displayQuestion(); } function showScores() { const resultElement = document.getElementById('result'); resultElement.innerHTML = `Votre score est de ${score} sur ${questions.length}`; } displayQuestion(); </script>
-<br>
-        
-        <br><br><h1>Jeu de Réveil et de Culture</h1> <div class="section"> <label for="language">Choisissez votre langue :</label> <select id="language" onchange="changeLanguage()"> <option value="fr">Français</option> <option value="en">English</option> <option value="es">Español</option> <option value="de">Deutsch</option> <option value="it">Italiano</option> </select> </div> <div id="quiz"></div> <div class="result" id="result"></div> <script> const questions = { fr: [ { question: "Quelle est la capitale de la France ?", choices: ["Paris", "Londres", "Berlin", "Madrid"], answer: "Paris" }, { question: "Qui a écrit 'Les Misérables' ?", choices: ["Victor Hugo", "Émile Zola", "Gustave Flaubert", "Marcel Proust"], answer: "Victor Hugo" } ], en: [ { question: "What is the capital of France?", choices: ["Paris", "London", "Berlin", "Madrid"], answer: "Paris" }, { question: "Who wrote 'Les Misérables'?", choices: ["Victor Hugo", "Émile Zola", "Gustave Flaubert", "Marcel Proust"], answer: "Victor Hugo" } ], es: [ { question: "¿Cuál es la capital de Francia?", choices: ["París", "Londres", "Berlín", "Madrid"], answer: "París" }, { question: "¿Quién escribió 'Los Miserables'?", choices: ["Victor Hugo", "Émile Zola", "Gustave Flaubert", "Marcel Proust"], answer: "Victor Hugo" } ], de: [ { question: "Was ist die Hauptstadt von Frankreich?", choices: ["Paris", "London", "Berlin", "Madrid"], answer: "Paris" }, { question: "Wer schrieb 'Les Misérables'?", choices: ["Victor Hugo", "Émile Zola", "Gustave Flaubert", "Marcel Proust"], answer: "Victor Hugo" } ], it: [ { question: "Qual è la capitale della Francia?", choices: ["Parigi", "Londra", "Berlino", "Madrid"], answer: "Parigi" }, { question: "Chi ha scritto 'I Miserabili'?", choices: ["Victor Hugo", "Émile Zola", "Gustave Flaubert", "Marcel Proust"], answer: "Victor Hugo" } ] }; let currentLanguage = 'fr'; let currentQuestionIndex = 0; let score = 0; function changeLanguage() { currentLanguage = document.getElementById('language').value; currentQuestionIndex = 0; score = 0; displayQuestion(); } function displayQuestion() { if (currentQuestionIndex >= questions[currentLanguage].length) { showScores(); return; } const questionData = questions[currentLanguage][currentQuestionIndex]; const quizElement = document.getElementById('quiz'); quizElement.innerHTML = ` <div class="question">${questionData.question}</div> <ul class="choices"> ${questionData.choices.map(choice => ` <li> <button onclick="handleGuess('${choice}')">${choice}</button> </li> `).join('')} </ul> `; } function handleGuess(choice) { const questionData = questions[currentLanguage][currentQuestionIndex]; if (choice === questionData.answer) { score++; } currentQuestionIndex++; displayQuestion(); } function showScores() { const resultElement = document.getElementById('result'); resultElement.innerHTML = `Votre score est de ${score} sur ${questions[currentLanguage].length}`; } displayQuestion(); </script>
-<br><br>
-    <h1>Jeu Éducatif pour Enfants</h1> <div class="section"> <label for="language">Choisissez votre langue :</label> <select id="language" onchange="changeLanguage()"> <option value="fr">Français</option> <option value="en">English</option> <option value="es">Español</option> <option value="de">Deutsch</option> <option value="it">Italiano</option> </select> </div> <div id="quiz"></div> <div class="result" id="result"></div> <script> const questions = { fr: [ { question: "Quel animal miaule ?", choices: ["Chien", "Chat", "Vache", "Cheval"], answer: "Chat" }, { question: "Quelle couleur est le ciel ?", choices: ["Rouge", "Bleu", "Vert", "Jaune"], answer: "Bleu" }, { question: "Combien font 2 + 2 ?", choices: ["3", "4", "5", "6"], answer: "4" } ], en: [ { question: "Which animal meows?", choices: ["Dog", "Cat", "Cow", "Horse"], answer: "Cat" }, { question: "What color is the sky?", choices: ["Red", "Blue", "Green", "Yellow"], answer: "Blue" }, { question: "What is 2 + 2?", choices: ["3", "4", "5", "6"], answer: "4" } ], es: [ { question: "¿Qué animal maúlla?", choices: ["Perro", "Gato", "Vaca", "Caballo"], answer: "Gato" }, { question: "¿De qué color es el cielo?", choices: ["Rojo", "Azul", "Verde", "Amarillo"], answer: "Azul" }, { question: "¿Cuánto es 2 + 2?", choices: ["3", "4", "5", "6"], answer: "4" } ], de: [ { question: "Welches Tier miaut?", choices: ["Hund", "Katze", "Kuh", "Pferd"], answer: "Katze" }, { question: "Welche Farbe hat der Himmel?", choices: ["Rot", "Blau", "Grün", "Gelb"], answer: "Blau" }, { question: "Was ist 2 + 2?", choices: ["3", "4", "5", "6"], answer: "4" } ], it: [ { question: "Quale animale miagola?", choices: ["Cane", "Gatto", "Mucca", "Cavallo"], answer: "Gatto" }, { question: "Di che colore è il cielo?", choices: ["Rosso", "Blu", "Verde", "Giallo"], answer: "Blu" }, { question: "Quanto fa 2 + 2?", choices: ["3", "4", "5", "6"], answer: "4" } ] }; let currentLanguage = 'fr'; let currentQuestionIndex = 0; let score = 0; function changeLanguage() { currentLanguage = document.getElementById('language').value; currentQuestionIndex = 0; score = 0; displayQuestion(); } function displayQuestion() { if (currentQuestionIndex >= questions[currentLanguage].length) { showScores(); return; } const questionData = questions[currentLanguage][currentQuestionIndex]; const quizElement = document.getElementById('quiz'); quizElement.innerHTML = ` <div class="question">${questionData.question}</div> <ul class="choices"> ${questionData.choices.map(choice => ` <li> <button onclick="handleGuess('${choice}')">${choice}</button> </li> `).join('')} </ul> `; } function handleGuess(choice) { const questionData = questions[currentLanguage][currentQuestionIndex]; if (choice === questionData.answer) { score++; } currentQuestionIndex++; displayQuestion(); } function showScores() { const resultElement = document.getElementById('result'); resultElement.innerHTML = `Votre score est de ${score} sur ${questions[currentLanguage].length}`; } displayQuestion(); </script>
-<br><br><br>
-    <h1>Jeu de Pratique de la Télépathie</h1> <div class="section"> <label for="role">Choisissez votre rôle :</label> <select id="role"> <option value="expediteur">Expéditeur</option> <option value="recepteur">Récepteur</option> </select> </div> <div class="section" id="expediteur-section"> <label for="thought">Entrez une pensée (image, mot ou nombre) :</label> <input type="text" id="thought"> <button onclick="envoyerPensee()">Envoyer la Pensée</button> </div> <div class="section" id="recepteur-section" style="display: none;"> <button onclick="recevoirPensee()">Recevoir la Pensée</button> <div id="impression"></div> </div> <div class="result" id="result"></div> <script> class JeuTelepathie { constructor() { this.pensee = ''; } envoyerPensee(pensee) { this.pensee = pensee; } recevoirPensee() { return this.pensee; } } const jeu = new JeuTelepathie(); function envoyerPensee() { const pensee = document.getElementById('thought').value; jeu.envoyerPensee(pensee); document.getElementById('result').innerText = 'Pensée envoyée !'; } function recevoirPensee() { const penseeRecue = jeu.recevoirPensee(); document.getElementById('impression').innerText = `Pensée reçue : ${penseeRecue}`; } document.getElementById('role').addEventListener('change', function() { const role = this.value; if (role === 'expediteur') { document.getElementById('expediteur-section').style.display = 'block'; document.getElementById('recepteur-section').style.display = 'none'; } else { document.getElementById('expediteur-section').style.display = 'none'; document.getElementById('recepteur-section').style.display = 'block'; } }); </script>
-
-
-    <br><br><br>
-    <h1>Telepathy Practice Game</h1> <div class="section"> <label for="role">Choose your role:</label> <select id="role"> <option value="sender">Sender</option> <option value="receiver">Receiver</option> </select> </div> <div class="section" id="sender-section"> <label for="thought">Enter a thought (image, word, or number):</label> <input type="text" id="thought"> <button onclick="sendThought()">Send Thought</button> </div> <div class="section" id="receiver-section" style="display: none;"> <button onclick="receiveThought()">Receive Thought</button> <div id="impression"></div> </div> <div class="result" id="result"></div> <script> class TelepathyGame { constructor() { this.thought = ''; } sendThought(thought) { this.thought = thought; } receiveThought() { return this.thought; } } const game = new TelepathyGame(); function sendThought() { const thought = document.getElementById('thought').value; game.sendThought(thought); document.getElementById('result').innerText = 'Thought sent!'; } function receiveThought() { const receivedThought = game.receiveThought(); document.getElementById('impression').innerText = `Received thought: ${receivedThought}`; } document.getElementById('role').addEventListener('change', function() { const role = this.value; if (role === 'sender') { document.getElementById('sender-section').style.display = 'block'; document.getElementById('receiver-section').style.display = 'none'; } else { document.getElementById('sender-section').style.display = 'none'; document.getElementById('receiver-section').style.display = 'block'; } }); </script>
-    
-    <h1>Jeu de Quiz sur l'Actualité</h1>
-    <div id="quiz"></div>
-    <div class="result" id="result"></div>
-    <script>
-        class Question {
-            constructor(text, choices, answer) {
-                this.text = text;
-                this.choices = choices;
-                this.answer = answer;
-            }
-
-            isCorrectAnswer(choice) {
-                return this.answer === choice;
-            }
-        }
-
-        class Quiz {
-            constructor(questions) {
-                this.questions = questions;
-                this.score = 0;
-                this.currentQuestionIndex = 0;
-            }
-
-            getCurrentQuestion() {
-                return this.questions[this.currentQuestionIndex];
-            }
-
-            guess(answer) {
-                if (this.getCurrentQuestion().isCorrectAnswer(answer)) {
-                    this.score++;
-                }
-                this.currentQuestionIndex++;
-            }
-
-            hasEnded() {
-                return this.currentQuestionIndex >= this.questions.length;
-            }
-        }
-
-        const questions = [
-            new Question("Quelle est la capitale de la France ?", ["Paris", "Londres", "Berlin", "Madrid"], "Paris"),
-            new Question("Qui est le président des États-Unis en 2024 ?", ["Joe Biden", "Donald Trump", "Kamala Harris", "Barack Obama"], "Joe Biden"),
-            new Question("Quelle est la monnaie utilisée au Japon ?", ["Yen", "Dollar", "Euro", "Won"], "Yen")
-        ];
-
-        const quiz = new Quiz(questions);
-
-        function displayQuestion() {
-            if (quiz.hasEnded()) {
-                showScores();
-            } else {
-                const questionElement = document.getElementById("quiz");
-                questionElement.innerHTML = `
-                    <div class="question">${quiz.getCurrentQuestion().text}</div>
-                    <ul class="choices">
-                        ${quiz.getCurrentQuestion().choices.map(choice => `
-                            <li>
-                                <button onclick="handleGuess('${choice}')">${choice}</button>
-                            </li>
-                        `).join('')}
-                    </ul>
-                `;
-            }
-        }
-
-        function handleGuess(choice) {
-            quiz.guess(choice);
-            displayQuestion();
-        }
-
-        function showScores() {
-            const resultElement = document.getElementById("result");
-            resultElement.innerHTML = `Votre score est de ${quiz.score} sur ${quiz.questions.length}`;
-        }
-
-        displayQuestion();
-    </script>
-    <h1>Visualisation des Données VK</h1>
-    <svg width="500" height="300"></svg>
-
-    <script>
->>>>>>> 6f23877 (Add files via upload)
         // Sélectionner l'élément SVG où le graphique sera dessiné
         const svg = d3.select("svg");
 
@@ -619,7 +476,6 @@ document.writeln(DocDate(),"</b></font>");
 
         svg.append("g")
             .call(d3.axisLeft(yScale));
-<<<<<<< HEAD
 
         // Jeu avec des Images
         const canvas = document.getElementById('gameCanvas');
@@ -680,8 +536,6 @@ document.writeln(DocDate(),"</b></font>");
  
  
  </table>
-
-    </script>
-
 </body>
 </html>
+
