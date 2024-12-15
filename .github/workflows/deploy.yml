@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+
+    - name: Build and deploy
+      run: |
+        # Commandes pour construire ton projet
+        # Ex: npm install && npm run build
+
+        # Copier les fichiers construits vers le dossier des pages GitHub
+        # mkdir -p out && cp -r build/* out/
+
+        # Déployer sur GitHub Pages
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add .
+        git commit -m "Deploy to GitHub Pages"
+        git push origin gh-pages --force
