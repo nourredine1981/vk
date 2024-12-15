@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 name: Java CI
 
@@ -26,3 +27,33 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 f7d7f8af9f4086057db575ac7c588b321955f1f5
+=======
+<<<<<<< HEAD
+=======
+name: Java CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+f7d7f8af9f4086057db575ac7c588b321955f1f5
+>>>>>>> update
