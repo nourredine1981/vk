@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Telepathie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 1s ease;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        // Fonction pour générer une couleur aléatoire
+        function generateRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Fonction pour changer la couleur de fond
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = generateRandomColor();
+        }
+
+        // Changer la couleur de fond à chaque nouvelle visite
+        window.onload = function() {
+            changeBackgroundColor();
+        }
+    </script>
+</head>
+<body>
+    <h1>Theosophical Appropriations: Esotericism, Kabbalah, and More</h1>
+    <a href="https://www.academia.edu/Theosophical_Appropriations" target="_blank">Theosophical Appropriations: Esotericism, Kabbalah, and More - Academia.edu</a>
+    <a href="https://core.ac.uk/download/pdf/147574136.pdf" target="_blank">Bibliography of Occult and Fantastic Beliefs vol.4: S - Z - CORE</a>
+    <a href="https://online-lib.ru/authors/zig" target="_blank">Твоя библиотека - online-lib.ru</a>
+</body>
+</html>
