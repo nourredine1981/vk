@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const cacheName = 'v1';
 const cacheAssets = [
     'pwa.html',
@@ -45,6 +46,8 @@ self.addEventListener('fetch', e => {
     );
 });
 =======
+=======
+>>>>>>> origin/vk
 const cacheName = 'v1';
 const cacheAssets = [
     'pwa.html',
@@ -90,4 +93,7 @@ self.addEventListener('fetch', e => {
         fetch(e.request).catch(() => caches.match(e.request))
     );
 });
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk

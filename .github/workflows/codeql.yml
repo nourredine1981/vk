@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 name: "CodeQL"
 
 on:
@@ -40,13 +41,19 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
 =======
+=======
+>>>>>>> origin/vk
 name: "CodeQL"
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
+<<<<<<< HEAD
     # The branches below must be a subset of the branches above
+=======
+    # Les branches ci-dessous doivent être un sous-ensemble des branches ci-dessus
+>>>>>>> origin/vk
     branches: [ "main" ]
   schedule:
     - cron: '0 0 * * 1'
@@ -80,4 +87,7 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk

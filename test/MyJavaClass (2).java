@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,8 @@ public class MyJavaClass {
 }
 
 =======
+=======
+>>>>>>> origin/vk
 
 
 
@@ -20,4 +23,7 @@ public class MyJavaClass {
     }
 }
 
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk

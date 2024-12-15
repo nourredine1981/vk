@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/vk
 
 
 
@@ -12,7 +15,10 @@ public class MyJavaClass {
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk
 
 
 
@@ -23,6 +29,7 @@ public class MyJavaClass {
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -37,4 +44,6 @@ public class MyJavaClass {
 
 =======
 >>>>>>> update
+=======
+>>>>>>> origin/vk
 >>>>>>> b58451c (mise a jour)

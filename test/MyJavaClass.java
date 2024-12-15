@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class MyJavaClass {
     public static void main(String[] args) {
         if (args.length > 0) {
@@ -26,6 +27,8 @@ public class MyJavaClass {
     }
 }
 =======
+=======
+>>>>>>> origin/vk
 public class MyJavaClass {
     public static void main(String[] args) {
         if (args.length > 0) {
@@ -52,4 +55,7 @@ public class MyJavaClass {
         System.out.println("Function 2 called");
     }
 }
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk

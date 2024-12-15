@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/vk
 {
   "name": "vk",
   "version": "1.0.0",
@@ -18,6 +21,7 @@
   },
   "homepage": "https://github.com/nourredine1981/vk#readme"
 }
+<<<<<<< HEAD
 =======
 {
   "name": "vk",
@@ -39,3 +43,5 @@
   "homepage": "https://github.com/nourredine1981/vk#readme"
 }
 >>>>>>> update
+=======
+>>>>>>> origin/vk

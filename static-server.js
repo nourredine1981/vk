@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -54,6 +55,8 @@ server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
 =======
+=======
+>>>>>>> origin/vk
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -108,4 +111,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk

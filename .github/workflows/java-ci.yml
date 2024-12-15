@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 name: Java CI
 
 on:
@@ -28,6 +29,8 @@ jobs:
     - name: Run Java
       run: java MyJavaClass
 =======
+=======
+>>>>>>> origin/vk
 name: Java CI
 
 on:
@@ -56,4 +59,7 @@ jobs:
 
     - name: Run Java
       run: java MyJavaClass
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk

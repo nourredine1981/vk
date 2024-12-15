@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/vk
 const cacheName = 'v1';
 const cacheAssets = [
     'pwa.html',
@@ -47,7 +50,10 @@ self.addEventListener('fetch', e => {
     );
 });
 =======
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk
 const cacheName = 'v1';
 const cacheAssets = [
     'pwa.html',
@@ -93,6 +99,7 @@ self.addEventListener('fetch', e => {
         fetch(e.request).catch(() => caches.match(e.request))
     );
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const cacheName = 'v1';
@@ -142,4 +149,6 @@ self.addEventListener('fetch', e => {
 });
 =======
 >>>>>>> update
+=======
+>>>>>>> origin/vk
 >>>>>>> b58451c (mise a jour)

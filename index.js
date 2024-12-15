@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/vk
 
 
 
@@ -263,7 +266,10 @@ fetch(`https://api.vk.com/method/messages.send?user_id=${userId}&message=${messa
   })
   .catch(error => console.error('Erreur de requête:', error));
 =======
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk
 
 
 
@@ -525,6 +531,7 @@ fetch(`https://api.vk.com/method/messages.send?user_id=${userId}&message=${messa
     }
   })
   .catch(error => console.error('Erreur de requête:', error));
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -790,4 +797,6 @@ fetch(`https://api.vk.com/method/messages.send?user_id=${userId}&message=${messa
   .catch(error => console.error('Erreur de requête:', error));
 =======
 >>>>>>> update
+=======
+>>>>>>> origin/vk
 >>>>>>> b58451c (mise a jour)

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 name: Android CI
 
 on:
@@ -25,6 +26,8 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 =======
+=======
+>>>>>>> origin/vk
 name: Android CI
 
 on:
@@ -50,4 +53,7 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/vk
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
@@ -42,6 +45,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+<<<<<<< HEAD
 =======
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
@@ -87,3 +91,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 >>>>>>> update
+=======
+>>>>>>> origin/vk

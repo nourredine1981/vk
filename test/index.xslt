@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:exsl="http://exslt.org/common"
@@ -56,6 +57,8 @@
   
 </xsl:stylesheet>
 =======
+=======
+>>>>>>> origin/vk
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:exsl="http://exslt.org/common"
@@ -112,4 +115,7 @@
   </xsl:template>
   
 </xsl:stylesheet>
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk

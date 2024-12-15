@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
   "name": "PWA de Nourredine",
   "short_name": "Nourredine",
@@ -20,6 +21,8 @@
   ]
 }
 =======
+=======
+>>>>>>> origin/vk
 {
   "name": "PWA de Nourredine",
   "short_name": "Nourredine",
@@ -40,4 +43,7 @@
     }
   ]
 }
+<<<<<<< HEAD
 >>>>>>> update
+=======
+>>>>>>> origin/vk
