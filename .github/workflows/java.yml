@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 name: Java CI
 
 on:
@@ -25,4 +24,4 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-f7d7f8af9f4086057db575ac7c588b321955f1f5
+
