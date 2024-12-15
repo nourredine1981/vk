@@ -1,11 +1,1 @@
-
-[submodule "vk"]
-    path = vk
-    url = https://github.com/nourredine1981/vk.git
-
-[submodule=""]
-
-path = vk 
-url= https://github.com/nourredine1981/vk.git
-
-
+[submodule "vk"] active = true url = https://github.com/nourredine1981/vk.git branch = feature-branch
