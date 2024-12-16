@@ -175,7 +175,41 @@ function getLongDateString()
 
 </script>
 </head>
-    <body><h1>Bienvenue sur mon site web <script>document.write("<font face='Verdana' size='2' color='#000080'>Dernière mise à jour : <b>"); document.writeln(DocDate(), "</b></font>");</script> <hr /> <button onclick="redirectToNourredine()">Bienvenue sur la page de Nourredine</button>
+    <body><h1>
+
+                <h1>Current Trends in Mathematics</h1> <ul id="trends-list"></ul>
+
+                <script document.addEventListener('DOMContentLoaded',=document.addEventListener('DOMContentLoaded', ()=()>
+ {
+                                        let count = 0;
+                                        const counterElement = document.createElement('p');
+                                        counterElement.textContent = `Compteur : ${count}`;
+                                        document.getElementById('content').appendChild(counterElement);
+
+                                        setInterval(() => {
+                                        count++;
+                                        counterElement.textContent = `Compteur : ${count}`;
+                                        }, 1000);
+
+                                        const timeElement = document.createElement('p');
+                                        timeElement.textContent = `Heure actuelle : ${new Date().toLocaleTimeString()}`;
+                                        document.getElementById('content').appendChild(timeElement);
+
+                                        const img = document.createElement('img');
+                                        img.src = 'https://via.placeholder.com/150';
+                                        img.alt = 'Image de remplacement';
+                                        document.getElementById('content').appendChild(img);
+
+
+
+
+
+
+                </script>
+
+
+	    
+	    <br><br>Bienvenue sur mon site web <script>document.write("<font face='Verdana' size='2' color='#000080'>Dernière mise à jour : <b>"); document.writeln(DocDate(), "</b></font>");</script> <hr /> <button onclick="redirectToNourredine()">Bienvenue sur la page de Nourredine</button>
                 <script>function redirectToNourredine() { alert("Bienvenue sur la page de Nourredine"); window.location.href = "nourredine.html"; }</script></h1> <p>Nombre de visiteurs depuis l'ouverture du site : <span id="visitorCount">Chargement...</span></p> <script> // Fonction pour obtenir le nombre de visiteurs via l'API Reporting de Google Analytics async function getVisitorCount() { try { const response = await fetch(`https://analyticsreporting.googleapis.com/v4/reports:batchGet`, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer hp_YfdjbdmQWmtrZubAOcOxhIIgrl3PVt0DdJZD` }, body: JSON.stringify({ reportRequests: [ { viewId: '10040551140', dateRanges: [ { startDate: '2020-01-01', // Date de début de suivi endDate: 'today' } ], metrics: [ { expression: 'ga:users' } ] } ] }) }); const data = await response.json(); const visitorCount = data.reports[0].data.totals[0].values[0]; document.getElementById('visitorCount').textContent = visitorCount; } catch (error) { console.error('Erreur lors de la récupération du nombre de visiteurs:', error); document.getElementById('visitorCount').textContent = 'Erreur lors de la récupération des données'; } } // Appel de la fonction pour obtenir le nombre de visiteurs getVisitorCount(); </script>
 
 
@@ -510,38 +544,6 @@ function getLongDateString()
                 <script>document.getElementById('fileInput').addEventListener('change', function(event) { const file = event.target.files[0]; if (file) { const audioPlayer = document.getElementById('audioPlayer'); audioPlayer.src = URL.createObjectURL(file); audioPlayer.play(); } });</script>
 
 
-
-
-
-                <h1>Current Trends in Mathematics</h1> <ul id="trends-list"></ul>
-
-                <script document.addEventListener('DOMContentLoaded',=document.addEventListener('DOMContentLoaded', ()=()>
- {
-                                        let count = 0;
-                                        const counterElement = document.createElement('p');
-                                        counterElement.textContent = `Compteur : ${count}`;
-                                        document.getElementById('content').appendChild(counterElement);
-
-                                        setInterval(() => {
-                                        count++;
-                                        counterElement.textContent = `Compteur : ${count}`;
-                                        }, 1000);
-
-                                        const timeElement = document.createElement('p');
-                                        timeElement.textContent = `Heure actuelle : ${new Date().toLocaleTimeString()}`;
-                                        document.getElementById('content').appendChild(timeElement);
-
-                                        const img = document.createElement('img');
-                                        img.src = 'https://via.placeholder.com/150';
-                                        img.alt = 'Image de remplacement';
-                                        document.getElementById('content').appendChild(img);
-
-
-
-
-
-
-                </script>
 
 
 
