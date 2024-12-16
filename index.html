@@ -232,23 +232,7 @@ function getLongDateString()
                 </script>
 
                 <h1>Images Aléatoires</h1>
-                <img id="randomImage" src="" alt="Image aléatoire" />
-
-                <script>
-                                                                                                                                            const images = [
-                                                                                                                                                "./n.jpg", "./n2.jpg", "./n3.jpg", "./n4.jpg", "./n5.jpg", "./n6.jpg",
-                                                                                                                                                "./n7.jpg", "./n8.jpg", "./n9.jpg", "./n10.jpg", "./n11.jpg", "./n12.jpg",
-                                                                                                                                                "./n13.jpg", "./n14.jpg", "./n15.jpg", "./n16.jpg", "./n17.jpg", "./n18.jpg", "./n19.jpg"
-                                                                                                                                            ];
-
-                                                                                                                                            function changeImage() {
-                                                                                                                                                const randomIndex = Math.floor(Math.random() * images.length);
-                                                                                                                                                document.getElementById('randomImage').src = images[randomIndex];
-                                                                                                                                            }
-
-                                                                                                                                            setInterval(changeImage, 10000); // Change l'image toutes les 10 secondes
-                                                                                                                                            changeImage(); // Affiche immédiatement une première image
-                </script>
+                <img id="randomImage" src="" alt="Image aléatoire" /> <script> const images = [ "./n.jpg", "./n2.jpg", "./n3.jpg", "./n4.jpg", "./n5.jpg", "./n6.jpg", "./n7.jpg", "./n8.jpg", "./n9.jpg", "./n10.jpg", "./n11.jpg", "./n12.jpg", "./n13.jpg", "./n14.jpg", "./n15.jpg", "./n16.jpg", "./n17.jpg", "./n18.jpg", "./n19.jpg" ]; function changeImage() { const randomIndex = Math.floor(Math.random() * images.length); document.getElementById('randomImage').src = images[randomIndex]; } setInterval(changeImage, 10000); // Change l'image toutes les 10 secondes changeImage(); // Affiche immédiatement une première image </script>
             </td>
             <td>
                 <p>
