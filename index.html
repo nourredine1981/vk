@@ -217,17 +217,6 @@ function getLongDateString()
 
                     <p id="message">Chargement <h1>Current Trends in Mathematics</h1> <ul id="trends-list"></ul></p>
 
-
-
-                    // VÃ©rifier si le compteur existe dÃ©jÃ  dans le stockage local if (localStorage.getItem('visitCount')) { // IncrÃ©menter le compteur localStorage.setItem('visitCount', Number(localStorage.getItem('visitCount')) + 1); } else { // Initialiser le compteur localStorage.setItem('visitCount', 1); } // Afficher le compteur document.getElementById('counter').textContent = 'Nombre de visites : ' + localStorage.getItem('visitCount');
-                 
-              
-               
-
-
-
-
-
                 <h1>Lecteur de Musique</h1> <input type="file" id="fileInput" accept="audio/*" /> <audio id="audioPlayer" controls=controls> Votre navigateur ne supporte pas l'ÃƒÂ©lÃƒÂ©ment audio. </audio>
                 <script>document.getElementById('fileInput').addEventListener('change', function(event) { const file = event.target.files[0]; if (file) { const audioPlayer = document.getElementById('audioPlayer'); audioPlayer.src = URL.createObjectURL(file); audioPlayer.play(); } });</script>
 
